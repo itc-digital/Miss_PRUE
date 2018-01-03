@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Регистрация</title>
+</head>
+
+<body>
+  <form name="name">
+    <p>
+      <b>ФИО</b>
+      <br><input type="text" name="fio">
+    </p>
+    <p>
+      <b>Курс</b>
+      <br><select name="kurs">
+        <option value="first">1</option>
+        <option value="second">2</option>
+        <option value="third">3</option>
+        <option value="fourth">4</option>
+        <option value="fifth">5</option>
+      </select>
+    </p>
+    <p>
+      <b>Факультет</b>
+      <br><select name="fakultet">
+        <option value="finance">ФФ</option>
+        <option value="fmesi">ФМЭСИ</option>
+        <option value="hrtsi">ГРТСИ</option>
+        <option value="ibs">МШБиМЭ</option>
+        <option value="captains">Капитаны России</option>
+        <option value="fma">ФМа</option>
+        <option value="fme">ФМе</option>
+        <option value="fep">ФЭП</option>
+        <option value="fett">ФЭТТ</option>
+        <option value="iuisep">ИУиСЭП</option>
+        <option value="businessschool">БШМиП</option>
+        <option value="integral">Integral</option>
+      </select>
+    </p>
+    <p>
+      <b>Номер телефона</b>
+      <br><input type="tel" name="phonenumber">
+    </p>
+    <p>
+      <b>Ссылка на профиль ВКонтакте</b>
+      <br><input type="url" name="vklink">
+    </p>
+    <p>
+      <b>Рост</b>
+      <br><input type="number" name="height" min="150" max="210">
+    </p>
+    <p>
+      <b>Расскажи про свои увлечения, хобби</b>
+      <br><textarea rows="10" cols="45" name="hobbies"></textarea>
+    </p>
+    <p>
+      <b>Фотографии</b>
+      <p>Загрузите 3-5 ваших фотографий, обязательно должно быть хотя бы одно портретное фото и одно фото в полный рост.</p>
+      <input type="file" name="photos" multiple accept="image/*">
+    </p>
+    <p>
+      <b>Что нужно, чтобы стать Мистером РЭУ-2018?</b>
+      <br><textarea rows="10" cols="45" name="howto"></textarea>
+    </p>
+    <p>
+      <b>Большая просьба! На кастинг приходить с готовой идеей для творческого номера. Быть готовым продемонстрировать свои таланты.</b>
+    </p>
+    <p>
+      <br><button type="submit" name="submit">Отправить форму</button>
+    </p>
+  </form>
+  <script src="index.js"></script>
+</body>
+</html>
