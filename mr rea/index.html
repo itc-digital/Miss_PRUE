@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.com/libraries/normalize.css">
+</head>
+
+<body>
+<div class="container">
+<div class="row">
+    <div class="col-xs-4">
+      <div class="background-first-col">
+                    <div class="mr-rea">
+                        Мистер РЭУ
+                    </div>
+                    <div class="text-on-pic">
+                        Большая просьба! На кастинг приходить с готовой идеей для творческого номера. Быть готовым продемонстрировать свои таланты.
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-8">
+                  <div class="form-sign-up">
+                    <strong>Регистрация</strong>
+                    <form name="name">
+                  <div class="row">
+                    <div class="col-xs-6">
+                      <div class="main-info">
+                            <br><input type="text" name="fio" class="type" placeholder="*ФИО">
+                            <br><select name="kurs" class="type">
+    <option value="zero" selected style="display:none;">Курс</option>
+    <option value="first">1</option>
+    <option value="second">2</option>
+    <option value="third">3</option>
+    <option value="fourth">4</option>
+    <option value="fifth">5</option>
+  </select>
+                            <br><select name="fakultet"class="type">
+    <option value="zero" selected style="display:none;">Факультет</option>
+    <option value="finance">ФФ</option>
+    <option value="fmesi">ФМЭСИ</option>
+    <option value="hrtsi">ГРТСИ</option>
+    <option value="ibs">МШБиМЭ</option>
+    <option value="captains">Капитаны России</option>
+    <option value="fma">ФМа</option>
+    <option value="fme">ФМе</option>
+    <option value="fep">ФЭП</option>
+    <option value="fett">ФЭТТ</option>
+    <option value="iuisep">ИУиСЭП</option>
+    <option value="businessschool">БШМиП</option>
+    <option value="integral">Integral</option>
+  </select>
+                            <br><input type="tel" name="phonenumber" id="phone" placeholder="*Номер телефона" class="type">
+
+                            <br><input type="url" name="vklink" placeholder="*Ссылка ВК" class="type">
+                            <br><input type="number" name="height" min="150" max="210" placeholder="*Рост (в см)" class="type">
+                            <p>
+                            <b class="hobbies">Расскажи про свои увлечения, хобби</b>
+                            <br><textarea rows="1" cols="45" name="hobbies" class="type"></textarea>
+                        </p>
+                        <p>
+                            <b class="howto">Что нужно, чтобы стать Мистером РЭУ-2018?</b>
+                            <br><textarea rows="1" cols="45" name="howto" class="type"></textarea>
+                        </p>
+                      </div>
+                      </div>
+                              <div class="col-xs-6">
+                        <p class="text-photos">*Фотографии 3-5 шт (обязательно портретное фото и в полный рост)</p>
+                          <div class="add-photo">
+                            <label><input type="file" name="photos" multiple accept="image/*"><span>Прикрепить <img class="papper-clip" src="Vector.svg"></span></label>
+                          </div>
+                    </div>
+                </div>
+                <br><button type="submit" name="submit" class="submit">РЕГИСТРАЦИЯ</button>
+              </form>
+                  </div>
+                </div>
+                    </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+        <script src="index.js"></script>
+
+</body>
+
+</html>
