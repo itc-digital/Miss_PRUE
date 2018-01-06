@@ -1,0 +1,158 @@
+@font-face {
+     font-family: "Exo 2";
+     src: url("fonts/Exo2-Regular.otf") format("truetype");
+     font-style: normal;
+     font-weight: normal;
+}
+ @font-face {
+     font-family: "Exo 2";
+     src: url("fonts/Exo2-Bold.ttf") format("truetype");
+     font-style: normal;
+     font-weight: bold;
+}
+ @font-face {
+     font-family: "Exo 2";
+     src: url("fonts/Exo2-SemiBold.ttf") format("truetype");
+     font-style: normal;
+     font-weight: 600;
+}
+ html, body {
+     height: 100%;
+     margin: 0;
+}
+ body {
+    /* выравнивание по центру страницы флексбоксом */
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #333;
+}
+ input, select, textarea {
+     width: 179px;
+     border: 0;
+     outline: 0;
+     background: transparent;
+     border-bottom: 2px solid #D5D9DC;
+     -webkit-appearance: none;
+     -moz-appearance: none;
+     appearance: none;
+     color: #036772;
+     resize: none;
+     overflow: hidden;
+     font-size: 15px;
+}
+ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+     -webkit-appearance: none;
+     -moz-appearance: none;
+}
+ .form-card {
+     display: flex;
+     width: 921px;
+     height: 534px;
+     background: #fff;
+}
+ .form-card-image {
+     height: 100%;
+     flex-basis: 371px;
+     background: url("image 2.jpg")
+}
+ .mr-rea {
+     text-align: center;
+     font-family: "Exo 2";
+     font-style: normal;
+     font-weight: 500;
+     line-height: normal;
+     font-size: 28px;
+     color: #FFFCFC;
+}
+ .text-on-pic {
+     width: 288px;
+     height: 48px;
+     font-family: "Exo 2";
+     font-style: normal;
+     font-weight: normal;
+     line-height: normal;
+     font-size: 12px;
+     text-align: center;
+     color: #FFFFFF;
+}
+ .form-card-content {
+     display: flex;
+     flex-wrap: wrap;
+    /* те блоки, которые не влезли, будут переноситься на новую строку */
+     flex-grow: 1;
+    /* означает "занимай всю оставшееся пространство" (в нашем случае, по ширине) */
+}
+ .form-card-title {
+     flex-basis: 100%;
+     font-family: "Exo 2";
+     font-style: normal;
+     font-weight: 600;
+     line-height: normal;
+     font-size: 16px;
+     color: #024147;
+}
+ .form-card-fields {
+     flex-basis: 50%;
+}
+ .text-about-field {
+     font-family: "Exo 2";
+     font-style: normal;
+     font-weight: normal;
+     line-height: normal;
+     color: #036772;
+}
+ .form-card-file_input {
+     flex-basis: 50%;
+     font-family: "Exo 2";
+     font-style: normal;
+     font-weight: normal;
+     line-height: normal;
+     font-size: 12px;
+     color: #036772;
+}
+ .form-card-register_wrapper {
+     flex-basis: 100%;
+}
+ .photos-upload input{
+     display: none;
+}
+ .photos-upload {
+     position: absolute;
+     width: 151px;
+     height: 36px;
+     background: #036772;
+     border-radius: 10px;
+}
+ .photos-upload span {
+     width: 68px;
+     height: 15px;
+     font-family: "Exo 2";
+     font-style: normal;
+     font-weight: normal;
+     line-height: normal;
+     font-size: 12px;
+     color: #FFFFFF;
+}
+ .paper-clip {
+     flex: auto;
+}
+ .submit {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     width: 186px;
+     height: 38px;
+     background: #FFFFFF;
+     border: 1px solid #035F69;
+     box-sizing: border-box;
+     border-radius: 10px;
+     font-family: "Exo 2";
+     text-align: center;
+     font-style: normal;
+     font-weight: normal;
+     line-height: normal;
+     font-size: 12px;
+     color: #036772;
+}
+ 
