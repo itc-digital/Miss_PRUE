@@ -56,25 +56,28 @@
      flex-basis: 371px;
      background: url("image 2.jpg")
 }
- .mr-rea {
-     text-align: center;
-     font-family: "Exo 2";
-     font-style: normal;
-     font-weight: 500;
-     line-height: normal;
-     font-size: 28px;
-     color: #FFFCFC;
-}
  .text-on-pic {
-     width: 288px;
-     height: 48px;
+     text-align: center;
+     height: 100%;
+     width: 100%;
+}
+ .text-on-pic span {
      font-family: "Exo 2";
      font-style: normal;
-     font-weight: normal;
      line-height: normal;
-     font-size: 12px;
-     text-align: center;
      color: #FFFFFF;
+}
+ .mr-rea {
+     display: block;
+     margin-top: 30%;
+     font-weight: 500;
+     font-size: 28px;
+}
+ .text-main-picture {
+     display: block;
+     margin-top: 120%;
+     font-weight: normal;
+     font-size: 12px;
 }
  .form-card-content {
      display: flex;
@@ -155,4 +158,3 @@
      font-size: 12px;
      color: #036772;
 }
- 
