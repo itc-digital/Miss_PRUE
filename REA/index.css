@@ -49,6 +49,12 @@
      overflow: hidden;
      font-size: 12px;
 }
+input:focus, 
+select:focus,
+textarea:focus {
+    border-bottom: 2px solid #B4BAC6;
+}
+
 @media (max-width: 921px) {
     input, select, textarea {
         padding-bottom: 10px;
