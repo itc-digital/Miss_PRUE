@@ -1,5 +1,15 @@
 $(function() {
   $("#phonenumber").mask("+7(000) 000-00-00");
+
+  $("textarea")
+    .css({
+      height: this.scrollHeight + "px",
+      "overflow-y": "hidden"
+    })
+    .on("input", function() {
+      this.style.height = "auto";
+      this.style.height = this.scrollHeight + "px";
+    });
 });
 
 $('body input[name="vklink"]').mask(
@@ -15,6 +25,6 @@ $('body input[name="vklink"]').mask(
 );
 
 $("#photos").change(function(event) {
-    var photosCount = $("#photos")[0].files.length;
-    $("#photos-count").html("Ты прикрепил " + photosCount + " фото");
+  var photosCount = $("#photos")[0].files.length;
+  $("#photos-count").html("Ты прикрепил " + photosCount + " фото");
 });

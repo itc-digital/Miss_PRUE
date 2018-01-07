@@ -131,7 +131,8 @@ body input::-webkit-input-placeholder {
      font-size: 12px;
      color: #036772;
 }
-#hobbies-and-essay {
+#hobbies, #essay {
+    padding: 0;
     margin-top: 10%;
 }
  .form-card-file_input {
