@@ -198,6 +198,13 @@ body input::-webkit-input-placeholder {
      flex-basis: 100%;
      padding: 50px;
 }
+@media (max-width: 921px) {
+    .form-card-register_wrapper {
+        margin: 20px;
+        margin-top: 60px;
+        padding: 0px;
+    }
+}
  .attachment input {
      display: none;
 }
