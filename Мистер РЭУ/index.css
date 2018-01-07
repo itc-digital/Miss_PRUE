@@ -28,7 +28,8 @@
      background: #333;
 }
  input, select, textarea {
-     width: 179px;
+     width: 100%;
+     margin-bottom: 33px;
      border: 0;
      outline: 0;
      background: transparent;
@@ -52,22 +53,19 @@
      background: #fff;
 }
  .form-card-image {
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
      height: 100%;
      flex-basis: 371px;
-     background: url("image 2.jpg")
-}
- .text-on-pic {
      text-align: center;
-     height: 100%;
-     width: 100%;
-}
- .text-on-pic span {
      font-family: "Exo 2";
      font-style: normal;
      line-height: normal;
      color: #FFFFFF;
+     background: url("image 2.jpg");
 }
- .mr-rea {
+ .brand-title {
      display: block;
      margin-top: 30%;
      font-weight: 500;
@@ -75,19 +73,18 @@
 }
  .text-main-picture {
      display: block;
-     margin-top: 120%;
+     padding: 40px;
      font-weight: normal;
      font-size: 12px;
 }
  .form-card-content {
      display: flex;
      flex-wrap: wrap;
-    /* те блоки, которые не влезли, будут переноситься на новую строку */
-     flex-grow: 1;
-    /* означает "занимай всю оставшееся пространство" (в нашем случае, по ширине) */
+     flex: 1;
 }
  .form-card-title {
      flex-basis: 100%;
+     padding: 50px;
      font-family: "Exo 2";
      font-style: normal;
      font-weight: 600;
@@ -97,8 +94,13 @@
 }
  .form-card-fields {
      flex-basis: 50%;
+     height: 262px;
+     padding: 0 50px;
+     box-sizing: border-box;
+     overflow: auto;
 }
- .text-about-field {
+ .field-label {
+     display: block;
      font-family: "Exo 2";
      font-style: normal;
      font-weight: normal;
@@ -116,8 +118,9 @@
 }
  .form-card-register_wrapper {
      flex-basis: 100%;
+     padding: 50px;
 }
- .photos-upload input{
+ .photos-upload input {
      display: none;
 }
  .photos-upload {

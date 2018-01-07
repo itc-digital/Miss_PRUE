@@ -1,4 +1,3 @@
-console.log('wtf');
 $(function() {
-  $('#phonenumber').mask('+7(000) 000-00-00');
-  });
+  $("#phonenumber").mask("+7 (000) 000-00-00");
+});

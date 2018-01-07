@@ -11,64 +11,62 @@
 <body>
     <div class="form-card">
         <div class="form-card-image">
-            <div class="text-on-pic">
-                <span class="mr-rea">Мистер РЭУ</span>
-                <br><span class="text-main-picture">Большая просьба! На кастинг приходить с готовой идеей для творческого номера. Быть готовым продемонстрировать свои таланты.</span>
-            </div>
+            <span class="brand-title">Мистер РЭУ</span>
+            <span class="text-main-picture">Большая просьба! На кастинг приходить с готовой идеей для творческого номера. Быть готовым продемонстрировать
+                свои таланты.</span>
         </div>
-        <div class="form-card-content">
+        <form class="form-card-content" name="form-sign-up">
             <div class="form-card-title">
                 Регистрация
             </div>
             <div class="form-card-fields">
-                <form name="form-sign-up">
-                    <br><input type="text" name="fio" class="type-field" placeholder="*ФИО">
-                    <br><select name="kurs" class="type-field">
-<option value="zero" selected style="display:none;">Курс</option>
-<option value="first">1</option>
-<option value="second">2</option>
-<option value="third">3</option>
-<option value="fourth">4</option>
-<option value="fifth">5</option>
-</select>
-                    <br><select name="fakultet" class="type-field">
-<option value="zero" selected style="display:none;">Факультет</option>
-<option value="finance">ФФ</option>
-<option value="fmesi">ФМЭСИ</option>
-<option value="hrtsi">ГРТСИ</option>
-<option value="ibs">МШБиМЭ</option>
-<option value="captains">Капитаны России</option>
-<option value="fma">ФМа</option>
-<option value="fme">ФМе</option>
-<option value="fep">ФЭП</option>
-<option value="fett">ФЭТТ</option>
-<option value="iuisep">ИУиСЭП</option>
-<option value="businessschool">БШМиП</option>
-<option value="integral">Integral</option>
-</select>
-                    <br><input type="tel" name="phonenumber" id="phone" placeholder="*Номер телефона" class="type-field">
-                    <br><input type="url" name="vklink" id="vk" placeholder="*Ссылка ВК" class="type-field">
-                    <br><input type="number" name="height" min="150" max="210" placeholder="*Рост (в см)" class="type-field">
-                    <p class="text-about-field">
-                        Расскажи про свои увлечения, хобби
-                        <br><textarea rows="1" cols="5" name="hobbies" class="type-field"></textarea>
-                        <br>Что нужно, чтобы стать Мистером РЭУ-2018?
-                        <br><textarea rows="1" cols="5" name="howto" class="type-field"></textarea>
-                    </p>
+                <input type="text" name="fio" class="type-field" placeholder="*ФИО">
+                <select name="kurs" class="type-field">
+                    <option value="zero" selected style="display:none;">Курс</option>
+                    <option value="first">1</option>
+                    <option value="second">2</option>
+                    <option value="third">3</option>
+                    <option value="fourth">4</option>
+                    <option value="fifth">5</option>
+                </select>
+                <select name="fakultet" class="type-field">
+                    <option value="zero" selected style="display:none;">Факультет</option>
+                    <option value="finance">ФФ</option>
+                    <option value="fmesi">ФМЭСИ</option>
+                    <option value="hrtsi">ГРТСИ</option>
+                    <option value="ibs">МШБиМЭ</option>
+                    <option value="captains">Капитаны России</option>
+                    <option value="fma">ФМа</option>
+                    <option value="fme">ФМе</option>
+                    <option value="fep">ФЭП</option>
+                    <option value="fett">ФЭТТ</option>
+                    <option value="iuisep">ИУиСЭП</option>
+                    <option value="businessschool">БШМиП</option>
+                    <option value="integral">Integral</option>
+                </select>
+                <input type="tel" name="phonenumber" id="phonenumber" placeholder="*Номер телефона" class="type-field">
+                <input type="url" name="vklink" id="vk" placeholder="*Ссылка ВК" class="type-field">
+                <input type="number" name="height" min="150" max="210" placeholder="*Рост (в см)" class="type-field">
+                <label class="field-label" for="hobbies">Расскажи про свои увлечения, хобби</label>
+                <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field"></textarea>
+                <label class="field-label" for="essay">Что нужно, чтобы стать Мистером РЭУ-2018?</label>
+                <textarea id="essay" rows="1" cols="5" name="howto" class="type-field"></textarea>
             </div>
             <div class="form-card-file_input">
-                <br>*Фотографии 3-5 шт (обязательно портретное фото и в полный рост)
-                <br><label class="photos-upload">
-          <input type="file" name="photos" multiple accept="image/*">
-          <span>Прикрепить <img class="papper-clip" src="Vector.svg"></span>
-      </label>
+                <p>*Фотографии 3-5 шт (обязательно портретное фото и в полный рост)</p>
+                <label class="photos-upload">
+                    <input type="file" name="photos" multiple accept="image/*">
+                    <span>Прикрепить
+                        <img class="papper-clip" src="attachment-icon.svg">
+                    </span>
+                </label>
             </div>
             <div class="form-card-register_wrapper">
-                <br><button type="submit" name="submit" class="submit">РЕГИСТРАЦИЯ</button>
+                <button type="submit" name="submit" class="submit">РЕГИСТРАЦИЯ</button>
             </div>
-            </form>
-        </div>
+        </form>
     </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.13/jquery.mask.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
     <script src="index.js"></script>
