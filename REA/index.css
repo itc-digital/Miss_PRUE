@@ -149,27 +149,35 @@ body input::-webkit-input-placeholder {
      flex-basis: 100%;
      padding: 50px;
 }
- .photos-upload input {
+ .attachment input {
      display: none;
 }
 
- .photos-upload span {
+ .attachment-button {
+     justify-content: space-between;
+     align-items: center;
       width: 151px;
       height: 36px;
       margin-top: 69px;
       background: #036772;
       border-radius: 10px;
-     display: block;
+     display: flex;
      text-align: center;
      font-family: "Exo 2";
      font-style: normal;
      font-weight: normal;
      line-height: 36px; /*так можно ваще?*/
      font-size: 12px;
+     cursor: pointer;
      color: #FFFFFF;
 }
- .paper-clip {
-     flex: auto;
+.attachment-button-text {
+    margin-left: 20px;
+}
+ .papper-clip {
+    width: 17px;
+    height: 16px;
+    margin-right: 20px;
 }
  .submit {
      display: block;
