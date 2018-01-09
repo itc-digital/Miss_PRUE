@@ -1,5 +1,5 @@
 $(function() {
-    $('#phonenumber').mask('+7 (000) 000-00-00');
+    $('#phonenumber').mask('+7 (000) 000-00-00', { clearIfNotMatch: true });
 
     $('textarea')
         .css({
@@ -35,5 +35,29 @@ $(function() {
                 easing: 'swing'
             }
         );
+    });
+
+    $('#form').validate({
+        rules: {
+            fio: 'required',
+            phonenumber: 'required',
+            height: {
+                required: true,
+                number: true,
+                range: [140, 230]
+            }
+        },
+        submitHandler: function(form) {
+            form.submit();
+        },
+        errorPlacement: function(error, element) {
+            error.insertAfter(element);
+        }
+    });
+
+    $.extend($.validator.messages, {
+        required: 'Заполни это поле',
+        number: $.validator.format('Введи корректное число'),
+        range: $.validator.format('Введи значение между {0} и {1}')
     });
 });
