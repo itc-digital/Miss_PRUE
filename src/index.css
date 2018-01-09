@@ -161,7 +161,7 @@ body input::-webkit-input-placeholder {
     display: flex;
     flex-wrap: wrap;
     flex: 1;
-    padding: 50px;
+    padding: 45px 50px 50px 50px;
     background: #fff;
 }
 @media (max-width: 921px) {
@@ -174,7 +174,7 @@ body input::-webkit-input-placeholder {
     margin-bottom: 50px;
     flex-basis: 100%;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 28px;
     color: #024147;
 }
 @media (max-width: 921px) {
@@ -224,6 +224,7 @@ body input::-webkit-input-placeholder {
 
 label.error {
     font-family: 'Exo 2';
+    font-size: 14px;
     color: red;
 }
 
