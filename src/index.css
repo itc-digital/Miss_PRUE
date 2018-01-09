@@ -40,6 +40,7 @@ textarea {
     width: 100%;
     margin-top: 40px;
     padding-bottom: 5px;
+    box-sizing: border-box;
     border: 0;
     outline: 0;
     background: transparent;
@@ -105,7 +106,7 @@ body input::-webkit-input-placeholder {
     font-style: normal;
     line-height: normal;
     color: #ffffff;
-    background: url('static/logo.jpg');
+    background: url('static/cover.jpg');
     background-size: cover;
     background-position: center;
 }
