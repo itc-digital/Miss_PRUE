@@ -1,5 +1,5 @@
 $(function() {
-    $('#phonenumber').mask('+7 (000) 000-00-00', { clearIfNotMatch: true });
+    $('#phone').mask('+7 (000) 000-00-00', { clearIfNotMatch: true });
 
     $('textarea')
         .css({
@@ -39,8 +39,28 @@ $(function() {
 
     $('#form').validate({
         rules: {
-            fio: 'required',
-            phonenumber: 'required',
+            fio: {
+                required: true,
+                maxlength: 256
+            },
+            kurs: 'selectNotDefault',
+            fakultet: 'selectNotDefault',
+            vklink: {
+                required: true,
+                maxlength: 256
+            },
+            hobbies: {
+                required: true,
+                maxlength: 1024
+            },
+            mr_reu_2018: {
+                required: true,
+                maxlength: 1024
+            },
+            phone: {
+                required: true,
+                maxlength: 1024
+            },
             height: {
                 required: true,
                 number: true,
@@ -48,23 +68,32 @@ $(function() {
             }
         },
         submitHandler: function(form) {
-            var isCourseValid = $('#course')[0].value !== 'unset';
-            var isFacultyValid = $('#fakultet')[0].value !== 'unset';
+            var isYearValid = $('#year')[0].value !== 'unset';
+            var isFacultyValid = $('#faculty')[0].value !== 'unset';
 
-            if (isCourseValid && isFacultyValid) {
+            if (isYearValid && isFacultyValid) {
                 form.submit();
-            } else {
-                alert('Выбери курс и факультет');
             }
         },
         errorPlacement: function(error, element) {
             error.insertAfter(element);
         }
     });
+});
 
-    $.extend($.validator.messages, {
-        required: 'Заполни это поле',
-        number: $.validator.format('Введи корректное число'),
-        range: $.validator.format('Введи значение между {0} и {1}')
-    });
+$.validator.addMethod(
+    'selectNotDefault',
+    function(value, element) {
+        console.log(value, element);
+        return this.optional(element) || value !== 'unset';
+    },
+    $.validator.format('Please select a value')
+);
+
+$.extend($.validator.messages, {
+    required: 'Заполни это поле',
+    maxlength: 'В это поле нельзя ввести больше {0} символов',
+    number: $.validator.format('Введи корректное число'),
+    range: $.validator.format('Введи значение между {0} и {1}'),
+    selectNotDefault: 'Выбери значение'
 });

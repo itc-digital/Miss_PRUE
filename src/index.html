@@ -20,12 +20,13 @@
                 <button id="scroll-hint"></button>
             </div>
         </div>
-        <form class="form-card-content" id="form" name="form-sign-up">
+        <form class="form-card-content" id="form" name="form-sign-up" action="http://mister.the-center.it/misterreu2018" method="post"
+            enctype="multipart/form-data">
             <div class="form-card-title">
                 Регистрация
             </div>
             <div class="form-card-fields">
-                <input id="fio" type="text" name="fio" class="type-field" placeholder="*ФИО">
+                <input type="text" name="fio" class="type-field" placeholder="*ФИО">
                 <select name="kurs" class="type-field" required>
                     <option value="unset" selected style="display:none;">*Курс</option>
                     <option value="1">1</option>
@@ -34,7 +35,7 @@
                     <option value="4">4</option>
                     <option value="5">5</option>
                 </select>
-                <select id="fakultet" name="fakultet" class="type-field">
+                <select name="fakultet" class="type-field">
                     <option value="unset" selected style="display:none;">*Факультет</option>
                     <option value="ФФ">ФФ</option>
                     <option value="ФМЭСИ">ФМЭСИ</option>
@@ -49,25 +50,31 @@
                     <option value="БШМиП">БШМиП</option>
                     <option value="Integral">Integral</option>
                 </select>
-                <input id="phonenumber" type="tel" name="phonenumber" placeholder="*Номер телефона" class="type-field">
+                <input id="phone" type="tel" name="phone" placeholder="*Номер телефона" class="type-field">
                 <input id="vklink" type="url" name="vklink" placeholder="*Ссылка ВК" class="type-field">
                 <input id="height" type="text" name="height" placeholder="*Рост (в см)" class="type-field" pattern="\d*">
                 <label class="field-label" for="hobbies">Расскажи про свои увлечения, хобби</label>
-                <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field"></textarea>
+                <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field multiline-field"></textarea>
                 <label class="field-label" for="essay">Что нужно, чтобы стать Мистером РЭУ-2018?</label>
-                <textarea id="essay" rows="1" cols="5" name="mr_reu_2018" class="type-field"></textarea>
+                <textarea id="essay" rows="1" cols="5" name="mr_reu_2018" class="type-field multiline-field"></textarea>
             </div>
-            <div class="form-card-file_input">
-                <p class="text-photo-upload">*Фотографии 3-5 шт (обязательно портретное фото и в полный рост)</p>
-                <label class="attachment">
-                    <span id="photos-count">0</span>
-                    <input id="photos" type="file" name="photo[]" multiple accept="image/*" required>
-                    <div class="attachment-button">
-                        <img class="papper-clip" src="static/clip.svg">
-                    </div>
-                </label>
-            </div>
-            <div class="form-card-register_wrapper">
+            <div class="form-card-side_content">
+                <div class="photo-input-wrapper">
+                    <p class="text-photo-upload">
+                        Прикрепи
+                        <br>3-5 фотографий
+                    </p>
+                    <p class="text-photo-upload">
+                        Обязательно 1&nbsp;портретная и 1 в полный рост
+                    </p>
+                    <label class="attachment">
+                        <span id="photos-count">0</span>
+                        <input id="photos" type="file" name="photo[]" multiple accept="image/*" required>
+                        <div class="attachment-button">
+                            <img class="papper-clip" src="static/clip.svg">
+                        </div>
+                    </label>
+                </div>
                 <button type="submit" name="submit" class="submit">Отправить</button>
             </div>
         </form>
