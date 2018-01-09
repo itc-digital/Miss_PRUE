@@ -9,7 +9,13 @@ var concat = require('gulp-concat');
 
 var htmlPath = './src/*.html';
 var cssPath = './src/*.css';
-var jsPath = './src/*.js';
+var jsPath = [
+    './src/jquery-3.2.1.min.js',
+    './src/jquery.jscrollpane.min.js',
+    './src/jquery.mask.min.js',
+    './src/jquery.validate.min.js',
+    './src/index.js'
+];
 var staticPath = './src/static/*';
 var outputPath = './build/';
 
