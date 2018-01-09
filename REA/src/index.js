@@ -10,18 +10,30 @@ $(function() {
             this.style.height = 'auto';
             this.style.height = this.scrollHeight + 'px';
         });
-});
 
-$('#vklink').mask('httpS://vk.com/99999000000000000000000000000000', {
-    clearIfNotMatch: true,
-    translation: {
-        '0': { pattern: /[A-Za-z0-9_]/, optional: true },
-        '9': { pattern: /[A-Za-z0-9_]/ },
-        S: { pattern: /[s]/, optional: true }
-    }
-});
+    $('#vklink').mask('httpS://vk.com/99999000000000000000000000000000', {
+        clearIfNotMatch: true,
+        translation: {
+            '0': { pattern: /[A-Za-z0-9_]/, optional: true },
+            '9': { pattern: /[A-Za-z0-9_]/ },
+            S: { pattern: /[s]/, optional: true }
+        }
+    });
 
-$('#photos').change(function(event) {
-    var photosCount = $('#photos')[0].files.length;
-    $('#photos-count').html('Ты прикрепил ' + photosCount + ' фото');
+    $('#photos').change(function(event) {
+        var photosCount = $('#photos')[0].files.length;
+        $('#photos-count').html(photosCount);
+    });
+
+    $('#scroll-hint').click(function() {
+        $('html, body').animate(
+            {
+                scrollTop: $(window).height()
+            },
+            {
+                duration: 200,
+                easing: 'swing'
+            }
+        );
+    });
 });

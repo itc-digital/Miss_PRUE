@@ -14,8 +14,11 @@
     <div class="form-card">
         <div class="form-card-image">
             <span class="brand-title">Мистер РЭУ</span>
-            <span class="text-main-picture">Большая просьба! На кастинг приходить с готовой идеей для творческого номера. Быть готовым продемонстрировать
-                свои таланты.</span>
+            <div>
+                <span class="text-main-picture">Большая просьба! На кастинг приходить с готовой идеей для творческого номера. Быть готовым продемонстрировать
+                    свои таланты.</span>
+                <button id="scroll-hint"></button>
+            </div>
         </div>
         <form class="form-card-content" name="form-sign-up">
             <div class="form-card-title">
@@ -48,7 +51,7 @@
                 </select>
                 <input type="tel" name="phonenumber" id="phonenumber" placeholder="*Номер телефона" class="type-field">
                 <input type="url" name="vklink" id="vklink" placeholder="*Ссылка ВК" class="type-field">
-                <input type="number" name="height" min="150" max="210" placeholder="*Рост (в см)" class="type-field">
+                <input type="text" name="height" placeholder="*Рост (в см)" class="type-field" pattern="\d*">
                 <label class="field-label" for="hobbies">Расскажи про свои увлечения, хобби</label>
                 <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field"></textarea>
                 <label class="field-label" for="essay">Что нужно, чтобы стать Мистером РЭУ-2018?</label>
@@ -57,16 +60,16 @@
             <div class="form-card-file_input">
                 <p class="text-photo-upload">*Фотографии 3-5 шт (обязательно портретное фото и в полный рост)</p>
                 <label class="attachment">
+                    <span id="photos-count">0</span>
                     <input id="photos" type="file" name="photos" multiple accept="image/*">
                     <div class="attachment-button">
-                        <span class="attachment-button-text">Прикрепить</span>
                         <img class="papper-clip" src="static/clip-icon.png">
                     </div>
                 </label>
                 <p id="photos-count" class="text-photo-upload"></p>
             </div>
             <div class="form-card-register_wrapper">
-                <button type="submit" name="submit" class="submit">РЕГИСТРАЦИЯ</button>
+                <button type="submit" name="submit" class="submit">Отправить</button>
             </div>
         </form>
     </div>

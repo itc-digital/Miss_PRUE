@@ -62,7 +62,7 @@ gulp.task('static', function() {
     return gulp.src(staticPath).pipe(gulp.dest(outputPath + 'static'));
 });
 
-gulp.task('watch', function() {
+gulp.task('watch', ['html', 'js', 'css', 'static'], function() {
     gulp.watch(htmlPath, ['html']);
     gulp.watch(cssPath, ['css']);
     gulp.watch(jsPath, ['js']);

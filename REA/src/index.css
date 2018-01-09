@@ -25,7 +25,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #333;
+    background: #e9e9e9;
     overflow-x: hidden;
 }
 @media (max-width: 921px) {
@@ -50,7 +50,7 @@ textarea {
     color: #036772;
     resize: none;
     overflow: hidden;
-    font-size: 12px;
+    font-size: 14px;
 }
 input:focus,
 select:focus,
@@ -63,7 +63,7 @@ textarea:focus {
     select,
     textarea {
         padding-bottom: 10px;
-        font-size: 17px;
+        font-size: 20px;
     }
 }
 input[type='number'] {
@@ -86,6 +86,7 @@ body input::-webkit-input-placeholder {
     width: 921px;
     height: 534px;
     background: #fff;
+    box-shadow: 0px 6px 45px 0px rgba(0, 0, 0, 0.35);
 }
 @media (max-width: 921px) {
     .form-card {
@@ -98,19 +99,19 @@ body input::-webkit-input-placeholder {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    flex-basis: 371px;
+    flex-basis: 300px;
     text-align: center;
     font-family: 'Exo 2';
     font-style: normal;
     line-height: normal;
     color: #ffffff;
-    background: url('static/cover.jpg');
+    background: url('static/logo.jpg');
+    background-size: cover;
+    background-position: center;
 }
 @media (max-width: 921px) {
     .form-card-image {
         height: 100vh;
-        background-size: cover;
-        background-position: center;
     }
 }
 .brand-title {
@@ -123,8 +124,43 @@ body input::-webkit-input-placeholder {
     display: block;
     padding: 40px;
     font-weight: normal;
-    font-size: 12px;
+    font-size: 14px;
 }
+@media (max-width: 921px) {
+    .text-main-picture {
+        padding-bottom: 20px;
+    }
+}
+
+#scroll-hint {
+    display: none;
+}
+@keyframes scroll-hint-animation {
+    0% {
+        transform: translateY(10px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(10px);
+    }
+}
+@media (max-width: 921px) {
+    #scroll-hint {
+        display: inline-block;
+        height: 50px;
+        width: 100px;
+        margin-bottom: 20px;
+        background: url('static/arrow_down.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border: none;
+        animation: scroll-hint-animation 2s infinite;
+    }
+}
+
 .form-card-content {
     display: flex;
     flex-wrap: wrap;
@@ -141,10 +177,17 @@ body input::-webkit-input-placeholder {
     font-size: 16px;
     color: #024147;
 }
+@media (max-width: 921px) {
+    .form-card-title {
+        padding: 50px 20px;
+        font-size: 20px;
+    }
+}
+
 .form-card-fields {
-    flex-basis: 50%;
+    flex-basis: 68%;
     height: 262px;
-    padding: 0 50px;
+    padding: 0 20px 0 50px;
     box-sizing: border-box;
     overflow: auto;
 }
@@ -152,6 +195,7 @@ body input::-webkit-input-placeholder {
     .form-card-fields {
         flex-basis: 100%;
         height: 100%;
+        padding: 0 20px;
     }
 }
 ::-webkit-scrollbar {
@@ -165,12 +209,12 @@ body input::-webkit-input-placeholder {
 }
 .field-label {
     display: block;
-    margin-top: 10%;
+    margin-top: 40px;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 12px;
+    font-size: 14px;
     color: #036772;
 }
 @media (max-width: 921px) {
@@ -181,32 +225,47 @@ body input::-webkit-input-placeholder {
 #hobbies,
 #essay {
     padding: 0;
-    margin-top: 10%;
+    margin-top: 12px;
 }
 
 .form-card-file_input {
-    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 31%;
+    height: 262px;
+    padding: 0 50px 0 20px;
     box-sizing: border-box;
-    width: 176px;
-    height: 44px;
-    flex-basis: 50%;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    font-size: 12px;
     color: #036772;
 }
 @media (max-width: 921px) {
     .form-card-file_input {
-        flex-basis: 75%;
-        height: 100%;
+        flex-basis: 100%;
+        padding: 0 20px;
+        height: 200px;
         box-sizing: border-box;
     }
 }
+
 .text-photo-upload {
-    text-align: left;
+    font-size: 14px;
 }
+@media (max-width: 921px) {
+    .text-photo-upload {
+        font-size: 20px;
+    }
+}
+
+#photos-count {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 0.67;
+    color: #b4bac6;
+}
+
 .form-card-register_wrapper {
     flex-basis: 100%;
     padding: 50px;
@@ -218,51 +277,59 @@ body input::-webkit-input-placeholder {
         padding: 0px;
     }
 }
+
+.attachment {
+    display: flex;
+    justify-content: space-between;
+}
+
 .attachment input {
     display: none;
 }
 
 .attachment-button {
-    justify-content: space-between;
-    align-items: center;
-    width: 151px;
-    height: 36px;
-    margin-top: 69px;
-    background: #036772;
-    border-radius: 10px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    margin-right: 7px;
     text-align: center;
     font-family: 'Exo 2';
     font-style: normal;
     font-weight: normal;
-    line-height: 36px; /*так можно ваще?*/
-    font-size: 12px;
+    line-height: 36px;
+    border-radius: 50%;
+    background: #036772;
     cursor: pointer;
     color: #ffffff;
+    /* тень с анимацией */
 }
-.attachment-button-text {
-    margin-left: 20px;
+@media (max-width: 921px) {
+    .attachment-button {
+        width: 55px;
+        height: 55px;
+        margin-right: 0;
+    }
 }
 .papper-clip {
     width: 17px;
     height: 16px;
-    margin-right: 20px;
 }
+
 .submit {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 186px;
-    height: 38px;
-    background: #ffffff;
-    border: 1px solid #035f69;
+    margin: 0 auto;
+    padding: 12px 50px;
     box-sizing: border-box;
-    border-radius: 10px;
+    text-transform: uppercase;
+    border-radius: 19px;
     font-family: 'Exo 2';
-    text-align: center;
-    font-style: normal;
-    font-weight: normal;
-    line-height: normal;
-    font-size: 12px;
-    color: #036772;
+    font-size: 14px;
+    font-weight: 600;
+    background: #036772;
+    border: 1px solid #035f69;
+    cursor: pointer;
+    color: #fff;
+    /* тень с анимацией */
 }
