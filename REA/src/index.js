@@ -48,7 +48,14 @@ $(function() {
             }
         },
         submitHandler: function(form) {
-            form.submit();
+            var isCourseValid = $('#course')[0].value !== 'unset';
+            var isFacultyValid = $('#fakultet')[0].value !== 'unset';
+
+            if (isCourseValid && isFacultyValid) {
+                form.submit();
+            } else {
+                alert('Выбери курс и факультет');
+            }
         },
         errorPlacement: function(error, element) {
             error.insertAfter(element);

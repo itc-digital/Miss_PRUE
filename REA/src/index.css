@@ -303,7 +303,14 @@ body input::-webkit-input-placeholder {
     background: #036772;
     cursor: pointer;
     color: #ffffff;
-    /* тень с анимацией */
+    transition: box-shadow 100ms ease-in-out;
+    box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.75);
+}
+.attachment-button:hover {
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.75);
+}
+.attachment-button:active {
+    box-shadow: none;
 }
 @media (max-width: 921px) {
     .attachment-button {
@@ -331,5 +338,12 @@ body input::-webkit-input-placeholder {
     border: 1px solid #035f69;
     cursor: pointer;
     color: #fff;
-    /* тень с анимацией */
+    transition: box-shadow 100ms ease-in-out;
+    box-shadow: 1px 1px 8px 0 rgba(0,0,0,0.75);
+}
+.submit:hover {
+    box-shadow: 1px 1px 2px 0 rgba(0,0,0,0.75);
+}
+.submit:active {
+    box-shadow: none;
 }

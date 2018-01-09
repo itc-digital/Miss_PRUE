@@ -27,27 +27,27 @@
             <div class="form-card-fields">
                 <input id="fio" type="text" name="fio" class="type-field" placeholder="*ФИО">
                 <select name="kurs" class="type-field" required>
-                    <option value="zero" selected style="display:none;">*Курс</option>
-                    <option value="first">1</option>
-                    <option value="second">2</option>
-                    <option value="third">3</option>
-                    <option value="fourth">4</option>
-                    <option value="fifth">5</option>
+                    <option value="unset" selected style="display:none;">*Курс</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
                 </select>
-                <select name="fakultet" class="type-field">
-                    <option value="zero" selected style="display:none;">*Факультет</option>
-                    <option value="finance">ФФ</option>
-                    <option value="fmesi">ФМЭСИ</option>
-                    <option value="hrtsi">ГРТСИ</option>
-                    <option value="ibs">МШБиМЭ</option>
-                    <option value="captains">Капитаны России</option>
-                    <option value="fma">ФМа</option>
-                    <option value="fme">ФМе</option>
-                    <option value="fep">ФЭП</option>
-                    <option value="fett">ФЭТТ</option>
-                    <option value="iuisep">ИУиСЭП</option>
-                    <option value="businessschool">БШМиП</option>
-                    <option value="integral">Integral</option>
+                <select id="fakultet" name="fakultet" class="type-field">
+                    <option value="unset" selected style="display:none;">*Факультет</option>
+                    <option value="ФФ">ФФ</option>
+                    <option value="ФМЭСИ">ФМЭСИ</option>
+                    <option value="ГРТСИ">ГРТСИ</option>
+                    <option value="МШБиМЭ">МШБиМЭ</option>
+                    <option value="Капитаны России">Капитаны России</option>
+                    <option value="ФМа">ФМа</option>
+                    <option value="ФМе">ФМе</option>
+                    <option value="ФЭП">ФЭП</option>
+                    <option value="ФЭТТ">ФЭТТ</option>
+                    <option value="ИУиСЭП">ИУиСЭП</option>
+                    <option value="БШМиП">БШМиП</option>
+                    <option value="Integral">Integral</option>
                 </select>
                 <input id="phonenumber" type="tel" name="phonenumber" placeholder="*Номер телефона" class="type-field">
                 <input id="vklink" type="url" name="vklink" placeholder="*Ссылка ВК" class="type-field">
@@ -63,7 +63,7 @@
                     <span id="photos-count">0</span>
                     <input id="photos" type="file" name="photos" multiple accept="image/*">
                     <div class="attachment-button">
-                        <img class="papper-clip" src="static/clip-icon.png">
+                        <img class="papper-clip" src="static/clip.svg">
                     </div>
                 </label>
             </div>
