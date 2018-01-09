@@ -68,9 +68,6 @@ textarea:focus {
         font-size: 20px;
     }
 }
-input[type='number'] {
-    -moz-appearance: textfield;
-}
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -272,7 +269,7 @@ label.error {
 }
 
 #photos-count {
-    font-size: 72px;
+    font-size: 120px;
     font-weight: 600;
     line-height: 0.67;
     color: #b4bac6;
@@ -303,8 +300,8 @@ label.error {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 36px;
-    height: 36px;
+    width: 45px;
+    height: 45px;
     margin-right: 7px;
     text-align: center;
     font-family: 'Exo 2';
@@ -319,8 +316,8 @@ label.error {
     box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.75);
 }
 .attachment-button:hover {
-    transform: scale(1.01);
-    box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.5);
 }
 .attachment-button:active {
     background: #058694;
@@ -352,12 +349,13 @@ label.error {
     border: none;
     cursor: pointer;
     color: #fff;
+    outline: none;
     transition: all 100ms ease-in-out;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.75);
 }
 .submit:hover {
-    transform: scale(1.01);
-    box-shadow: 0 1px 8px 1px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+    box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.5);
 }
 .submit:active {
     background: #058694;

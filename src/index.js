@@ -1,14 +1,15 @@
 $(function() {
     $('#phone').mask('+7 (000) 000-00-00', { clearIfNotMatch: true });
 
+    var borderHeight = 2;
     $('textarea')
         .css({
-            height: this.scrollHeight + 'px',
+            height: this.scrollHeight + borderHeight + 'px',
             'overflow-y': 'hidden'
         })
         .on('input', function() {
             this.style.height = 'auto';
-            this.style.height = this.scrollHeight + 'px';
+            this.style.height = this.scrollHeight + borderHeight + 'px';
         });
 
     $('#vklink').mask('httpS://vk.com/99999000000000000000000000000000', {
