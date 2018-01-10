@@ -390,6 +390,7 @@ label.error {
 }
 
 .secondary-body {
+    flex-direction: column;
     padding: 20px;
     box-sizing: border-box;
     background: url('static/blured_cover.jpg');
