@@ -50,6 +50,9 @@ $(function() {
 
     $('#photos').change(function(event) {
         var photosCount = $('#photos')[0].files.length;
+        if (photosCount > 9) {
+            photosCount = 'X';
+        }
         $('#photos-count').html(photosCount);
     });
 
@@ -102,7 +105,8 @@ $(function() {
             var photosCount = $('#photos')[0].files.length;
             if (photosCount < 3) {
                 alert('Прикрепи как минимум 3 фотографии');
-            } else {
+            } else if (photosCount > 5) {
+                alert('Прикрепи не более 5 фотографий');
                 form.submit();
             }
         },
