@@ -17,7 +17,8 @@ var jsPath = [
     './src/index.js'
 ];
 var staticPath = './src/static/*';
-var outputPath = './build/';
+var outputPath = './build/ui/';
+var htmlOutputPath = './build/';
 
 gulp.task('default', ['html', 'js', 'css', 'static']);
 
@@ -25,7 +26,7 @@ gulp.task('html', function() {
     return gulp
         .src(htmlPath)
         .pipe(htmlmin({ collapseWhitespace: true }))
-        .pipe(gulp.dest(outputPath));
+        .pipe(gulp.dest(htmlOutputPath));
 });
 
 gulp.task('css', function() {

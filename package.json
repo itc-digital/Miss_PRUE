@@ -2,6 +2,11 @@
   "name": "mr-reu",
   "author": "leralins, mlshv",
   "license": "MIT",
+  "scripts": {
+    "watch": "gulp watch",
+    "build": "gulp",
+    "clean": "rm -rf build"
+  },
   "devDependencies": {
     "autoprefixer": "^7.2.4",
     "cssnano": "^3.10.0",
