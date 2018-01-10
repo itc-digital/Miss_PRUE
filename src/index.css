@@ -199,6 +199,22 @@ body input::-webkit-input-placeholder {
         overflow: hidden;
     }
 }
+
+.select-year {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(29% - 3px);
+    margin-right: 3px;
+    margin-top: 40px;
+}
+
+.select-faculty {
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    margin-top: 40px;
+}
+
 .type-field:first-child {
     margin-top: 0;
 }
@@ -361,4 +377,47 @@ label.error {
 }
 .submit:active {
     background: #058694;
+}
+
+
+.secondary-body {
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    background: url('static/blured_cover.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+}
+@media (max-width: 921px) {
+    .secondary-body {
+        align-items: center;
+    }
+}
+
+.secondary-title {
+    margin: 10px;
+}
+
+.secondary-title-large {
+    font-size: 60px;
+}
+
+.secondary-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid #fff;
+    color: #fff;
+    border-radius: 30px;
+    transition: transform 100ms ease-in-out;
+}
+
+.secondary-button:hover {
+    transform: scale(1.02);
+}
+
+.secondary-button:active {
+    transform: scale(0.99);
 }

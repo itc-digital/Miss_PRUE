@@ -27,29 +27,33 @@
             </div>
             <div class="form-card-fields">
                 <input type="text" name="fio" class="type-field" placeholder="*ФИО">
-                <select name="kurs" class="type-field" required>
-                    <option value="unset" selected style="display:none;">*Курс</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                </select>
-                <select name="fakultet" class="type-field">
-                    <option value="unset" selected style="display:none;">*Факультет</option>
-                    <option value="ФФ">ФФ</option>
-                    <option value="ФМЭСИ">ФМЭСИ</option>
-                    <option value="ГРТСИ">ГРТСИ</option>
-                    <option value="МШБиМЭ">МШБиМЭ</option>
-                    <option value="Капитаны России">Капитаны России</option>
-                    <option value="ФМа">ФМа</option>
-                    <option value="ФМе">ФМе</option>
-                    <option value="ФЭП">ФЭП</option>
-                    <option value="ФЭТТ">ФЭТТ</option>
-                    <option value="ИУиСЭП">ИУиСЭП</option>
-                    <option value="БШМиП">БШМиП</option>
-                    <option value="Integral">Integral</option>
-                </select>
+                <div class="select-year">
+                    <select name="kurs" class="type-field" required>
+                        <option value="unset" selected style="display:none;">*Курс</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+                <div class="select-faculty">
+                    <select name="fakultet" class="type-field">
+                        <option value="unset" selected style="display:none;">*Факультет</option>
+                        <option value="ФФ">ФФ</option>
+                        <option value="ФМЭСИ">ФМЭСИ</option>
+                        <option value="ГРТСИ">ГРТСИ</option>
+                        <option value="МШБиМЭ">МШБиМЭ</option>
+                        <option value="Капитаны России">Капитаны России</option>
+                        <option value="ФМа">ФМа</option>
+                        <option value="ФМе">ФМе</option>
+                        <option value="ФЭП">ФЭП</option>
+                        <option value="ФЭТТ">ФЭТТ</option>
+                        <option value="ИУиСЭП">ИУиСЭП</option>
+                        <option value="БШМиП">БШМиП</option>
+                        <option value="Integral">Integral</option>
+                    </select>
+                </div>
                 <input id="phone" type="tel" name="phone" placeholder="*Номер телефона" class="type-field">
                 <input id="vklink" type="url" name="vklink" placeholder="*Ссылка ВК" class="type-field">
                 <input id="height" type="text" name="height" placeholder="*Рост (в см)" class="type-field" pattern="\d*">
@@ -62,7 +66,8 @@
                 <div class="photo-input-wrapper">
                     <p class="text-photo-upload">
                         Прикрепи
-                        <br><b>3-5</b> фотографий
+                        <br>
+                        <b>3-5</b> фотографий
                     </p>
                     <p class="text-photo-upload">
                         Как минимум одну портретную и одну в полный рост
