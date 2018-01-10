@@ -11,6 +11,20 @@ function readFormFromLocalStorage() {
     }
 }
 
+function eraseFormFromLocalStorage() {
+    if (window.localStorage) {
+        localStorage.removeItem('data');
+    }
+}
+
+function applyFormData(data) {
+    if (data) {
+        data.forEach(function(input) {
+            $('*[name=' + input.name + ']')[0].value = input.value;
+        });
+    }
+}
+
 $(function() {
     $('#phone').mask('+7 (000) 000-00-00', { clearIfNotMatch: true });
 
@@ -84,7 +98,13 @@ $(function() {
         submitHandler: function(form) {
             var serialized = $('form').serializeArray();
             writeFormToLocalStorage(serialized);
-            //form.submit();
+
+            var photosCount = $('#photos')[0].files.length;
+            if (photosCount < 3) {
+                alert('Прикрепи как минимум 3 фотографии');
+            } else {
+                form.submit();
+            }
         },
         errorPlacement: function(error, element) {
             error.insertAfter(element);
@@ -92,7 +112,11 @@ $(function() {
     });
 
     var formData = readFormFromLocalStorage();
-    debugger;
+    if (formData && confirm('Ты уже заполнял эту форму. Восстановить введённые значения?')) {
+        applyFormData(formData);
+    } else {
+        eraseFormFromLocalStorage();
+    }
 });
 
 $.validator.addMethod(
