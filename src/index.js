@@ -1,3 +1,16 @@
+function writeFormToLocalStorage(data) {
+    if (window.localStorage) {
+        localStorage.setItem('data', JSON.stringify(data));
+    }
+}
+
+function readFormFromLocalStorage() {
+    if (window.localStorage) {
+        var data = localStorage.getItem('data');
+        return JSON.parse(data);
+    }
+}
+
 $(function() {
     $('#phone').mask('+7 (000) 000-00-00', { clearIfNotMatch: true });
 
@@ -69,23 +82,22 @@ $(function() {
             }
         },
         submitHandler: function(form) {
-            var isYearValid = $('#year')[0].value !== 'unset';
-            var isFacultyValid = $('#faculty')[0].value !== 'unset';
-
-            if (isYearValid && isFacultyValid) {
-                form.submit();
-            }
+            var serialized = $('form').serializeArray();
+            writeFormToLocalStorage(serialized);
+            //form.submit();
         },
         errorPlacement: function(error, element) {
             error.insertAfter(element);
         }
     });
+
+    var formData = readFormFromLocalStorage();
+    debugger;
 });
 
 $.validator.addMethod(
     'selectNotDefault',
     function(value, element) {
-        console.log(value, element);
         return this.optional(element) || value !== 'unset';
     },
     $.validator.format('Please select a value')

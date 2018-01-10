@@ -315,11 +315,11 @@ label.error {
     cursor: pointer;
     color: #ffffff;
     transition: all 100ms ease-in-out;
-    box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 .attachment-button:hover {
     transform: scale(1.02);
-    box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .attachment-button:active {
     background: #058694;
@@ -353,11 +353,11 @@ label.error {
     color: #fff;
     outline: none;
     transition: all 100ms ease-in-out;
-    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 .submit:hover {
     transform: scale(1.02);
-    box-shadow: 0 1px 12px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
 }
 .submit:active {
     background: #058694;
