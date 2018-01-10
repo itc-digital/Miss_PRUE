@@ -107,6 +107,7 @@ $(function() {
                 alert('Прикрепи как минимум 3 фотографии');
             } else if (photosCount > 5) {
                 alert('Прикрепи не более 5 фотографий');
+            } else {
                 form.submit();
             }
         },
