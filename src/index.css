@@ -196,6 +196,7 @@ body input::-webkit-input-placeholder {
         max-height: unset;
         height: 100%;
         padding: 0;
+        overflow: hidden;
     }
 }
 .type-field:first-child {
