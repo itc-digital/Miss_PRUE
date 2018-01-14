@@ -29,7 +29,12 @@ body {
     background: #e9e9e9;
     overflow-x: hidden;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
+    body {
+        align-items: unset;
+    }
+}
+@media (max-height: 667px) {
     body {
         align-items: unset;
     }
@@ -39,7 +44,6 @@ select,
 textarea {
     font-family: 'Exo 2';
     width: 100%;
-    margin-top: 40px;
     padding-bottom: 5px;
     box-sizing: border-box;
     border: 0;
@@ -49,18 +53,25 @@ textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: #036772;
+    color: #2a9ad2;
     resize: none;
     overflow: hidden;
-    font-size: 14px;
+    font-size: 17.5px;
 }
 input:focus,
 select:focus,
 textarea:focus {
     border-bottom: 2px solid #b4bac6;
 }
-
-@media (max-width: 921px) {
+input,
+select,
+textarea,
+.field-label,
+.select-faculty,
+.select-year {
+    margin-top: 60px;
+}
+@media (max-width: 1140px) {
     input,
     select,
     textarea {
@@ -77,19 +88,19 @@ body input::-webkit-input-placeholder {
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    color: #036772;
+    color: #2a9ad2;
     text-overflow: ellipsis;
 }
 .form-card {
     display: flex;
-    width: 921px;
-    height: 534px;
+    width: 1140px;
+    height: 667px;
     background: #fff;
     box-shadow: 0px 6px 45px 0px rgba(0, 0, 0, 0.35);
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .form-card {
-        width: 921px;
+        width: 1140px;
         display: block;
         min-height: 100%;
         width: 100%;
@@ -100,14 +111,14 @@ body input::-webkit-input-placeholder {
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    flex-basis: 300px;
+    flex-basis: 375px;
     text-align: center;
     color: #ffffff;
-    background: url('static/cover.jpg');
+    background: url('static/logo.jpg');
     background-size: cover;
     background-position: center;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .form-card-image {
         height: 100vh;
     }
@@ -115,24 +126,24 @@ body input::-webkit-input-placeholder {
 .brand-title {
     display: block;
     margin-top: 15%;
-    margin: 45px 0 0 0;
+    margin: 56px 0 0 0;
     font-weight: 500;
-    font-size: 28px;
+    font-size: 35px;
 }
 
 .itc-link {
     color: #fff;
     font-style: italic;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .text-main-picture {
     display: block;
     padding: 40px;
     font-weight: normal;
-    font-size: 14px;
+    font-size: 17.5px;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .text-main-picture {
         padding-bottom: 20px;
     }
@@ -152,7 +163,7 @@ body input::-webkit-input-placeholder {
         transform: translateY(10px);
     }
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     #scroll-hint {
         display: inline-block;
         height: 50px;
@@ -174,7 +185,7 @@ body input::-webkit-input-placeholder {
     padding: 45px 50px 50px 50px;
     background: #fff;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .form-card-content {
         padding: 20px;
     }
@@ -184,10 +195,10 @@ body input::-webkit-input-placeholder {
     margin-bottom: 50px;
     flex-basis: 100%;
     font-weight: 600;
-    font-size: 28px;
-    color: #024147;
+    font-size: 35px;
+    color: #022847;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .form-card-title {
         font-size: 20px;
     }
@@ -195,12 +206,12 @@ body input::-webkit-input-placeholder {
 
 .form-card-fields {
     flex-basis: 68%;
-    max-height: 366px;
+    max-height: 457px;
     padding-right: 20px;
     box-sizing: border-box;
     overflow: auto;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .form-card-fields {
         flex-basis: 100%;
         max-height: unset;
@@ -215,14 +226,12 @@ body input::-webkit-input-placeholder {
     vertical-align: top;
     width: calc(29% - 3px);
     margin-right: 3px;
-    margin-top: 40px;
 }
 
 .select-faculty {
     display: inline-block;
     vertical-align: top;
     width: 70%;
-    margin-top: 40px;
 }
 
 .type-field:first-child {
@@ -233,17 +242,16 @@ body input::-webkit-input-placeholder {
     background: #d5d9dc;
 }
 ::-webkit-scrollbar-thumb {
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
     background-color: #b4bac6;
 }
 .field-label {
     display: block;
-    margin-top: 40px;
-    font-size: 14px;
-    color: #036772;
+    font-size: 17.5px;
+    color: #2a9ad2;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .field-label {
         font-size: 20px;
     }
@@ -251,13 +259,13 @@ body input::-webkit-input-placeholder {
 
 label.error {
     font-family: 'Exo 2';
-    font-size: 14px;
+    font-size: 17.5px;
     color: red;
 }
 
 .multiline-field {
     padding: 0;
-    margin-top: 12px;
+    margin-top: 15px;
 }
 
 .form-card-side_content {
@@ -271,16 +279,16 @@ label.error {
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    color: #036772;
+    color: #2a9ad2;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .form-card-side_content {
         flex-basis: 100%;
         padding: 0;
         box-sizing: border-box;
     }
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .photo-input-wrapper {
         margin: 50px 0;
     }
@@ -288,16 +296,16 @@ label.error {
 
 .text-photo-upload {
     margin-top: 0;
-    font-size: 14px;
+    font-size: 17.5px;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .text-photo-upload {
         font-size: 20px;
     }
 }
 
 #photos-count {
-    font-size: 120px;
+    font-size: 150px;
     font-weight: 600;
     line-height: 0.67;
     color: #b4bac6;
@@ -307,7 +315,7 @@ label.error {
     flex-basis: 100%;
     padding: 50px;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .form-card-register_wrapper {
         margin: 20px;
         margin-top: 60px;
@@ -328,8 +336,8 @@ label.error {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 56px;
+    height: 56px;
     margin-right: 7px;
     text-align: center;
     font-family: 'Exo 2';
@@ -337,20 +345,20 @@ label.error {
     font-weight: normal;
     line-height: 36px;
     border-radius: 50%;
-    background: #036772;
+    background: #2a9ad2;
     cursor: pointer;
     color: #ffffff;
     transition: all 100ms ease-in-out;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .attachment-button:hover {
     transform: scale(1.02);
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.5);
 }
 .attachment-button:active {
-    background: #058694;
+    background: #4dc4ff;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .attachment-button {
         width: 55px;
         height: 55px;
@@ -366,27 +374,27 @@ label.error {
     display: block;
     width: 100%;
     margin: 0 auto;
-    padding: 12px;
+    padding: 15px;
     box-sizing: border-box;
     text-transform: uppercase;
-    border-radius: 21px;
+    border-radius: 3px;
     font-family: 'Exo 2';
-    font-size: 14px;
+    font-size: 17.5px;
     font-weight: 600;
-    background: #036772;
+    background: #2a9ad2;
     border: none;
     cursor: pointer;
     color: #fff;
     outline: none;
     transition: all 100ms ease-in-out;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .submit:hover {
     transform: scale(1.02);
-    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.5);
 }
 .submit:active {
-    background: #058694;
+    background: #4dc4ff;
 }
 
 .secondary-body {
@@ -399,7 +407,7 @@ label.error {
     text-align: center;
     color: #fff;
 }
-@media (max-width: 921px) {
+@media (max-width: 1140px) {
     .secondary-body {
         align-items: center;
     }
