@@ -32,6 +32,7 @@ gulp.task('html', function() {
 gulp.task('css', function() {
     var supportedBrowsers = [
         '> 1%',
+        'Chrome >= 5',
         'iOS >= 7.0',
         'Safari >= 7',
         'IE >= 10',
