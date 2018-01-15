@@ -209,6 +209,7 @@ body input::-webkit-input-placeholder {
 .form-card-title {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-basis: 100%;
     margin-bottom: 50px;
     padding-right: 15px;
@@ -223,9 +224,10 @@ body input::-webkit-input-placeholder {
 }
 
 .itc-link {
-    font-style: italic;
+    font-weight: bold;
     font-size: 15px;
     color: #2a9ad2;
+    text-decoration: none;
 }
 
 .form-card-fields {
