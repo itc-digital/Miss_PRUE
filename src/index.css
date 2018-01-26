@@ -130,7 +130,8 @@ body input::-webkit-input-placeholder {
 }
 .form-card-image {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: column-reverse;
     justify-content: space-between;
     height: 100%;
     flex-basis: 375px;
@@ -320,7 +321,7 @@ label.error {
 #photos-count {
     font-size: 150px;
     font-weight: 600;
-    line-height: 0.9;
+    line-height: 0.5;
     color: #DCD5D5;
 }
 
@@ -397,7 +398,7 @@ label.error {
     background: #986868;
     border: none;
     cursor: pointer;
-    color: #201010;
+    color: #DCD5D5;
     outline: none;
     transition: all 100ms ease-in-out;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
