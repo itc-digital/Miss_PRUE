@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'Lato';
-    src: url('static/Lato-Regular.ttf') format('truetype');
+    font-family: 'Vollkorn';
+    src: url('static/Vollkorn-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 @font-face {
-    font-family: 'Lato';
-    src: url('static/Lato-Bold.ttf') format('truetype');
+    font-family: 'Vollkorn';
+    src: url('static/Vollkorn-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: bold;
 }
 @font-face {
-    font-family: 'Lato';
-    src: url('static/Lato-SemiBold.ttf') format('truetype');
+    font-family: 'Vollkorn';
+    src: url('static/Vollkorn-SemiBold.ttf') format('truetype');
     font-style: normal;
     font-weight: 600;
 }
@@ -25,8 +25,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Lato';
-    background: #344959;
+    font-family: 'Vollkorn';
+    background: #DCD5D5;
     overflow-x: hidden;
 }
 @media (max-width: 1140px) {
@@ -37,18 +37,18 @@ body {
 input,
 select,
 textarea {
-    font-family: 'Lato';
+    font-family: 'Vollkorn';
     width: 100%;
     padding-bottom: 5px;
     box-sizing: border-box;
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 2px solid #344959;
+    border-bottom: 2px solid #D6C1C1;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: #2a9ad2;
+    color: #201010;
     resize: none;
     overflow: hidden;
     font-size: 17.5px;
@@ -56,35 +56,35 @@ textarea {
 input:focus,
 textarea:focus {
     border-bottom: 2px solid #8b9bbe;
-    color: #8b9bbe;
+    color: #201010;
 }
 select {
-    color: #2a9ad2;
+    color: #201010;
 }
 
 input::-webkit-input-placeholder {
     opacity: 1;
-    color: #2a9ad2;
+    color: #201010;
 }
 input::-ms-input-placeholder {
     opacity: 1;
-    color: #2a9ad2;
+    color: #201010;
 }
 input:-ms-input-placeholder {
     opacity: 1;
-    color: #2a9ad2;
+    color: #201010;
 }
 input::-moz-placeholder {
     opacity: 1;
-    color: #2a9ad2;
+    color: #201010;
 }
 input:-moz-placeholder {
     opacity: 1;
-    color: #2a9ad2;
+    color: #201010;
 }
 input::placeholder {
     opacity: 1;
-    color: #2a9ad2;
+    color: #201010;
 }
 input,
 select,
@@ -111,7 +111,7 @@ body input::-webkit-input-placeholder {
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    color: #2a9ad2;
+    color: #201010;
     text-overflow: ellipsis;
 }
 .form-card {
@@ -135,32 +135,14 @@ body input::-webkit-input-placeholder {
     height: 100%;
     flex-basis: 375px;
     text-align: center;
-    color: #fff;
-    background: url('static/logo.jpg');
+    color: #201010;
+    background: url('static/logo2.jpg');
     background-size: cover;
     background-position: center;
 }
 @media (max-width: 1140px) {
     .form-card-image {
         height: 100vh;
-    }
-}
-.brand-title {
-    display: block;
-    margin-top: 45px;
-    font-weight: 500;
-    font-size: 35px;
-}
-
-.text-main-picture {
-    display: block;
-    padding: 40px;
-    font-weight: normal;
-    font-size: 17.5px;
-}
-@media (max-width: 1140px) {
-    .text-main-picture {
-        padding-bottom: 20px;
     }
 }
 
@@ -198,7 +180,7 @@ body input::-webkit-input-placeholder {
     flex-wrap: wrap;
     flex: 1;
     padding: 45px 50px 50px 50px;
-    background: #0a151b;
+    background: #FFFDFD;
 }
 @media (max-width: 1140px) {
     .form-card-content {
@@ -215,7 +197,7 @@ body input::-webkit-input-placeholder {
     padding-right: 15px;
     font-weight: 600;
     font-size: 35px;
-    color: #2a9ad2;
+    color: #201010;
 }
 @media (max-width: 1140px) {
     .form-card-title {
@@ -226,7 +208,7 @@ body input::-webkit-input-placeholder {
 .itc-link {
     font-weight: bold;
     font-size: 15px;
-    color: #2a9ad2;
+    color: #DCD5D5;
     text-decoration: none;
 }
 
@@ -265,17 +247,17 @@ body input::-webkit-input-placeholder {
 }
 ::-webkit-scrollbar {
     width: 5px;
-    background: #19242d;
+    background: transparent;
 }
 ::-webkit-scrollbar-thumb {
     width: 15px;
-    height: 15px;
-    background-color: #344959;
+    height: 5px;
+    background-color: #DCD5D5;
 }
 .field-label {
     display: block;
     font-size: 17.5px;
-    color: #2a9ad2;
+    color: #201010;
 }
 @media (max-width: 1140px) {
     .field-label {
@@ -285,7 +267,7 @@ body input::-webkit-input-placeholder {
 
 label.error {
     margin-top: 5px;
-    font-family: 'Lato';
+    font-family: 'Vollkorn';
     font-size: 17.5px;
     color: #ff7b7b;
 }
@@ -302,11 +284,11 @@ label.error {
     flex-basis: 31%;
     padding-left: 20px;
     box-sizing: border-box;
-    font-family: 'Lato';
+    font-family: 'Vollkorn';
     font-style: normal;
     font-weight: normal;
     line-height: normal;
-    color: #2a9ad2;
+    color: #201010;
 }
 @media (max-width: 1140px) {
     .form-card-side_content {
@@ -331,11 +313,15 @@ label.error {
     }
 }
 
+#photos {
+    visibility: hidden;
+}
+
 #photos-count {
     font-size: 150px;
     font-weight: 600;
     line-height: 0.9;
-    color: #344959;
+    color: #DCD5D5;
 }
 
 .form-card-register_wrapper {
@@ -367,14 +353,14 @@ label.error {
     height: 56px;
     margin-right: 7px;
     text-align: center;
-    font-family: 'Lato';
+    font-family: 'Vollkorn';
     font-style: normal;
     font-weight: normal;
     line-height: 36px;
     border-radius: 50%;
-    background: #2a9ad2;
+    background: #986868;
     cursor: pointer;
-    color: #fff;
+    color: #201010;
     transition: all 100ms ease-in-out;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
@@ -405,13 +391,13 @@ label.error {
     box-sizing: border-box;
     text-transform: uppercase;
     border-radius: 3px;
-    font-family: 'Lato';
+    font-family: 'Vollkorn';
     font-size: 17.5px;
     font-weight: 600;
-    background: #2a9ad2;
+    background: #986868;
     border: none;
     cursor: pointer;
-    color: #fff;
+    color: #201010;
     outline: none;
     transition: all 100ms ease-in-out;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
@@ -432,7 +418,7 @@ label.error {
     background-position: center;
     background-size: cover;
     text-align: center;
-    color: #fff;
+    color: #201010;
 }
 @media (max-width: 1140px) {
     .secondary-body {
@@ -453,8 +439,8 @@ label.error {
     font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid #fff;
-    color: #fff;
+    border: 1px solid #201010;
+    color: #201010;
     border-radius: 30px;
     transition: transform 100ms ease-in-out;
 }

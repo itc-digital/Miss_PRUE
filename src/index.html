@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Мистер РЭУ | Регистрация</title>
+    <title>Мисс РЭУ | Регистрация</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="ui/index.css">
     <link rel="shortcut icon" href="ui/static/favicon.png" type="image/png">
@@ -13,20 +13,11 @@
 
 <body>
     <div class="form-card">
-        <div class="form-card-image">
-            <div>
-                <h1 class="brand-title">Мистер РЭУ</h1>
-            </div>
-            <div>
-                <span class="text-main-picture">Большая просьба! На кастинг приходить с готовой идеей для творческого номера. Быть готовым продемонстрировать
-                    свои таланты.</span>
-                <button id="scroll-hint"></button>
-            </div>
-        </div>
+        <div class="form-card-image"></div>
         <form class="form-card-content" id="form" name="form-sign-up" action="/misterreu2018" method="post" enctype="multipart/form-data">
             <div class="form-card-title">
                 <span>Регистрация</span>
-                    <a class="itc-link" href="https://vk.com/reu_it" target="_blank">
+                    <a class="itc-link" href="https://vk.com/reu_itc" target="_blank">
                         <img width="20px" src="ui/static/it_fucking_c.png" />
                     </a>
             </div>
@@ -64,9 +55,11 @@
                 <input id="phone" type="tel" name="phone" placeholder="*Номер телефона" class="type-field">
                 <input id="vklink" type="url" name="vklink" placeholder="*Ссылка ВК" class="type-field">
                 <input id="height" type="text" name="height" placeholder="*Рост (в см)" class="type-field" pattern="\d*">
-                <label class="field-label" for="hobbies">Расскажи про свои увлечения, хобби</label>
+                <label class="field-label" for="talent">Какой талант ты хочешь представить зрителям? Опиши задумку номера, который ты собираешься показать в творческом конкурсе</label>
+                <textarea id="talent" rows="1" cols="5" name="talent" class="type-field multiline-field"></textarea>
+                <label class="field-label" for="hobbies">Кто для тебя девушка Бонда?</label>
                 <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field multiline-field"></textarea>
-                <label class="field-label" for="essay">Что нужно, чтобы стать Мистером РЭУ-2018?</label>
+                <label class="field-label" for="essay">Почему ты решила стать Мисс Плехановский Университет?</label>
                 <textarea id="essay" rows="1" cols="5" name="mr_reu_2018" class="type-field multiline-field"></textarea>
             </div>
             <div class="form-card-side_content">
@@ -74,10 +67,10 @@
                     <p class="text-photo-upload">
                         Прикрепи
                         <br>
-                        <b>3-5</b> фотографий
+                        <b>2</b> фотографий
                     </p>
                     <p class="text-photo-upload">
-                        Как минимум одну портретную и одну в полный рост
+                        Одну портретную и одну в полный рост
                     </p>
                     <label class="attachment">
                         <span id="photos-count">0</span>
