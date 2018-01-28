@@ -48,6 +48,23 @@ $(function() {
         }
     });
 
+    $('#instagram').mask('httpS://instagram.com/99999000000000000000000000000000', {
+        clearIfNotMatch: true,
+        translation: {
+            '0': { pattern: /[A-Za-z0-9_]/, optional: true },
+            '9': { pattern: /[A-Za-z0-9_]/ },
+            S: { pattern: /[s]/, optional: true }
+        }
+    });
+
+    $('#params').mask('990/990/990', {
+        clearIfNotMatch: true,
+        translation: {
+            '0': { pattern: /[0-9]/, optional: true },
+            '9': { pattern: /[0-9]/ },
+        }
+    });
+
     $('#photos').change(function(event) {
         var photosCount = $('#photos')[0].files.length;
         if (photosCount > 9) {
@@ -103,10 +120,9 @@ $(function() {
             writeFormToLocalStorage(serialized);
 
             var photosCount = $('#photos')[0].files.length;
-            if (photosCount < 3) {
-                alert('Прикрепи как минимум 3 фотографии');
-            } else if (photosCount > 5) {
-                alert('Прикрепи не более 5 фотографий');
+            console.log(photosCount)
+            if (photosCount != 2) {
+                alert('Прикрепи 2 фотографии');
             } else {
                 form.submit();
             }
@@ -117,7 +133,7 @@ $(function() {
     });
 
     var formData = readFormFromLocalStorage();
-    if (formData && confirm('Ты уже заполнял эту форму. Восстановить введённые значения?')) {
+    if (formData && confirm('Ты уже заполняла эту форму. Восстановить введённые значения?')) {
         applyFormData(formData);
     } else {
         eraseFormFromLocalStorage();

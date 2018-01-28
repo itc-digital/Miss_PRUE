@@ -6,6 +6,7 @@
     <meta charset="utf-8">
     <title>Мисс РЭУ | Регистрация</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=cyrillic" rel="stylesheet">
     <link rel="stylesheet" href="ui/index.css">
     <link rel="shortcut icon" href="ui/static/favicon.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -16,7 +17,7 @@
         <div class="form-card-image">
             <button id="scroll-hint"></button>
         </div>
-        <form class="form-card-content" id="form" name="form-sign-up" action="/misterreu2018" method="post" enctype="multipart/form-data">
+        <form class="form-card-content" id="form" name="form-sign-up" action="/missrea2018" method="post" enctype="multipart/form-data">
             <div class="form-card-title">
                 <span>Регистрация</span>
                     <a class="itc-link" href="https://vk.com/reu_itc" target="_blank">
@@ -35,6 +36,8 @@
                         <option value="3">3</option>
                         <option value="4">4</option>
                         <option value="5">5</option>
+                        <option value="1 магистратура">1, магистратура</option>
+                        <option value="2 магистратура">2, магистратура</option>
                     </select>
                 </div>
                 <div class="select-faculty">
@@ -54,9 +57,11 @@
                         <option value="Integral">Integral</option>
                     </select>
                 </div>
-                <input id="phone" type="tel" name="phone" placeholder="*Номер телефона" class="type-field">
-                <input id="vklink" type="url" name="vklink" placeholder="*Ссылка ВК" class="type-field">
+                <input id="phone" type="tel" name="phone" placeholder="*Телефон" class="type-field">
+                <input id="vklink" type="url" name="vklink" placeholder="*Страница ВКонтакте" class="type-field">
+                <input id="instagram" type="url" name="instagram" placeholder="*Страница Instagram" class="type-field">
                 <input id="height" type="text" name="height" placeholder="*Рост (в см)" class="type-field" pattern="\d*">
+                <input id="params" type="text" name="params" placeholder="*Параметры (в см)" class="type-field" pattern="\d*">
                 <label class="field-label" for="talent">Какой талант ты хочешь представить зрителям? Опиши задумку номера, который ты собираешься показать в творческом конкурсе</label>
                 <textarea id="talent" rows="1" cols="5" name="talent" class="type-field multiline-field"></textarea>
                 <label class="field-label" for="hobbies">Кто для тебя девушка Бонда?</label>
