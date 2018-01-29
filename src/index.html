@@ -24,13 +24,14 @@
         <form class="form-card-content" id="form" name="form-sign-up" action="/missrea2018" method="post" enctype="multipart/form-data">
             <div class="form-card-title">
                 <span>Регистрация</span>
-                    <a class="itc-link" href="https://vk.com/reu_itc" target="_blank">
-                        <img width="20px" src="/ui/miss/static/it_fucking_c.png" />
-                    </a>
+                <a class="itc-link" href="https://vk.com/reu_itc" target="_blank">
+                    <img width="20px" src="/ui/miss/static/it_fucking_c.png" />
+                </a>
             </div>
             <div class="form-card-fields">
                 <div>
-                    <input type="text" name="fio" class="type-field" placeholder="*ФИО">
+                    <label class="field-label required" for="fio">ФИО</label>
+                    <input id="fio" type="text" name="fio" class="type-field">
                 </div>
                 <div class="select-year">
                     <select name="kurs" class="type-field" required>
@@ -61,17 +62,35 @@
                         <option value="Integral">Integral</option>
                     </select>
                 </div>
-                <input id="email" type="email" name="email" placeholder="*E-mail" class="type-field">
-                <input id="phone" type="tel" name="phone" placeholder="*Телефон" class="type-field">
-                <input id="vklink" type="url" name="vklink" placeholder="*Страница ВКонтакте" class="type-field">
-                <input id="instagram" type="url" name="instagram" placeholder="*Страница Instagram" class="type-field">
-                <input id="height" type="text" name="height" placeholder="*Рост (в см)" class="type-field" pattern="\d*">
-                <input id="params" type="text" name="params" placeholder="*Параметры (в см)" class="type-field" pattern="\d*">
-                <label class="field-label" for="talent">Какой талант ты хочешь представить зрителям? Опиши задумку номера, который ты собираешься показать в творческом конкурсе</label>
+                <label class="field-label required" for="email">Email</label>
+                <input id="email" type="email" name="email" class="type-field">
+                <label class="field-label required" for="phone">Телефон</label>
+                <input id="phone" type="tel" name="phone" placeholder="В формате 8ххххххх" class="type-field">
+                <label class="field-label required" for="vklink">Cтраница ВКонтакте</label>
+                <input id="vklink" type="url" name="vklink" class="type-field">
+                <label class="field-label" for="vklink">Cтраница Instagram</label>
+                <input id="instagram" type="url" name="instagram" placeholder="Необязательно" class="type-field">
+                <label class="field-label required" for="height">Рост (в см)</label>
+                <input id="height" type="text" name="height" class="type-field" pattern="\d*">
+                <label class="field-label param-label required" for="param1">Параметры (в см)</label>
+                <div class="inline-wrapper">
+                    <div>
+                        <input id="param1" type="text" name="param1" placeholder="Грудь" class="type-field" pattern="\d*">
+                    </div>
+                    <div>
+                        <input id="param2" type="text" name="param2" placeholder="Талия" class="type-field" pattern="\d*">
+                    </div>
+                    <div>
+                        <input id="param3" type="text" name="param3" placeholder="Бёдра" class="type-field" pattern="\d*">
+                    </div>
+                </div>
+                <input id="param" type="hidden" name="param">
+                <label class="field-label required" for="talent">Какой талант ты хочешь представить зрителям? Опиши задумку номера, который ты собираешься показать в творческом
+                    конкурсе</label>
                 <textarea id="talent" rows="1" cols="5" name="talent" class="type-field multiline-field"></textarea>
-                <label class="field-label" for="hobbies">Кто для тебя девушка Бонда?</label>
+                <label class="field-label required" for="hobbies">Кто для тебя девушка Бонда?</label>
                 <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field multiline-field"></textarea>
-                <label class="field-label" for="essay">Почему ты решила стать Мисс Плехановский Университет?</label>
+                <label class="field-label required" for="essay">Почему ты решила стать Мисс Плехановский Университет?</label>
                 <textarea id="essay" rows="1" cols="5" name="mr_reu_2018" class="type-field multiline-field"></textarea>
             </div>
             <div class="form-card-side_content">

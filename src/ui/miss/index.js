@@ -26,7 +26,7 @@ function applyFormData(data) {
 }
 
 $(function() {
-    $('#phone').mask('+7 (000) 000-00-00', { clearIfNotMatch: true });
+    $('#phone').mask('8 (000) 000-00-00', { clearIfNotMatch: true });
 
     var borderHeight = 2;
     $('textarea')
@@ -109,13 +109,29 @@ $(function() {
                 maxlength: 256
             },
             instagram: {
-                required: true,
+                required: false,
                 maxlength: 256
             },
             height: {
                 required: true,
                 number: true,
                 range: [140, 230]
+            },
+            param1: {
+                required: true,
+                number: true
+            },
+            param2: {
+                required: true,
+                number: true
+            },
+            param3: {
+                required: true,
+                number: true
+            },
+            talent: {
+                required: true,
+                maxlength: 1024
             },
             hobbies: {
                 required: true,
@@ -131,10 +147,16 @@ $(function() {
             writeFormToLocalStorage(serialized);
 
             var photosCount = $('#photos')[0].files.length;
-            console.log(photosCount);
             if (photosCount != 2) {
                 alert('Прикрепи 2 фотографии');
             } else {
+                var params =
+                    $('#param1')[0].value +
+                    '/' +
+                    $('#param2')[0].value +
+                    '/' +
+                    $('#param3')[0].value;
+                $('#param').val(params);
                 form.submit();
             }
         },
