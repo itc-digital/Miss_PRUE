@@ -31,7 +31,7 @@
             <div class="form-card-fields">
                 <div>
                     <label class="field-label required" for="fio">ФИО</label>
-                    <input id="fio" type="text" name="fio" class="type-field">
+                    <input id="fio" type="text" name="fio" class="type-field" maxlength="256">
                 </div>
                 <div class="select-year">
                     <select name="kurs" class="type-field" required>
@@ -62,36 +62,36 @@
                         <option value="Integral">Integral</option>
                     </select>
                 </div>
-                <label class="field-label required" for="email">Email</label>
-                <input id="email" type="email" name="email" class="type-field">
+                <label class="field-label required" for="email">E-mail</label>
+                <input id="email" type="email" name="email" class="type-field" maxlength="256">
                 <label class="field-label required" for="phone">Телефон</label>
-                <input id="phone" type="tel" name="phone" placeholder="В формате 8ххххххх" class="type-field">
+                <input id="phone" type="tel" name="phone" placeholder="В формате 8 (123) 456-78-90" class="type-field" maxlength="256">
                 <label class="field-label required" for="vklink">Cтраница ВКонтакте</label>
-                <input id="vklink" type="url" name="vklink" class="type-field">
+                <input id="vklink" type="url" name="vklink" class="type-field" maxlength="256">
                 <label class="field-label" for="vklink">Cтраница Instagram</label>
-                <input id="instagram" type="url" name="instagram" placeholder="Необязательно" class="type-field">
+                <input id="instagram" type="url" name="instagram" placeholder="Не обязательно" class="type-field" maxlength="256">
                 <label class="field-label required" for="height">Рост (в см)</label>
-                <input id="height" type="text" name="height" class="type-field" pattern="\d*">
+                <input id="height" type="text" name="height" class="type-field" pattern="\d*" maxlength="3">
                 <label class="field-label param-label required" for="param1">Параметры (в см)</label>
                 <div class="inline-wrapper">
                     <div>
-                        <input id="param1" type="text" name="param1" placeholder="Грудь" class="type-field" pattern="\d*">
+                        <input id="param1" type="text" name="param1" placeholder="Грудь" class="type-field" pattern="\d*" maxlength="3">
                     </div>
                     <div>
-                        <input id="param2" type="text" name="param2" placeholder="Талия" class="type-field" pattern="\d*">
+                        <input id="param2" type="text" name="param2" placeholder="Талия" class="type-field" pattern="\d*" maxlength="3">
                     </div>
                     <div>
-                        <input id="param3" type="text" name="param3" placeholder="Бёдра" class="type-field" pattern="\d*">
+                        <input id="param3" type="text" name="param3" placeholder="Бёдра" class="type-field" pattern="\d*" maxlength="3">
                     </div>
                 </div>
-                <input id="param" type="hidden" name="param">
+                <input id="param" type="hidden" name="params">
                 <label class="field-label required" for="talent">Какой талант ты хочешь представить зрителям? Опиши задумку номера, который ты собираешься показать в творческом
                     конкурсе</label>
-                <textarea id="talent" rows="1" cols="5" name="talent" class="type-field multiline-field"></textarea>
+                <textarea id="talent" rows="1" cols="5" name="talent" class="type-field multiline-field" maxlength="1024"></textarea>
                 <label class="field-label required" for="hobbies">Кто для тебя девушка Бонда?</label>
-                <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field multiline-field"></textarea>
+                <textarea id="hobbies" rows="1" cols="5" name="hobbies" class="type-field multiline-field" maxlength="1024"></textarea>
                 <label class="field-label required" for="essay">Почему ты решила стать Мисс Плехановский Университет?</label>
-                <textarea id="essay" rows="1" cols="5" name="mr_reu_2018" class="type-field multiline-field"></textarea>
+                <textarea id="essay" rows="1" cols="5" name="mr_reu_2018" class="type-field multiline-field" maxlength="1024"></textarea>
             </div>
             <div class="form-card-side_content">
                 <div class="photo-input-wrapper">
@@ -119,6 +119,9 @@
     <script src="/ui/miss/jquery.mask.min.js"></script>
     <script src="/ui/miss/jquery.validate.min.js"></script>
     <script src="/ui/miss/index.js"></script>
+    <check if="{{ @codeError }}"><script>
+        alert('{{ @textError }}');
+    </script></check>
 </body>
 
 </html>
