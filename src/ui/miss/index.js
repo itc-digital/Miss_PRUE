@@ -48,20 +48,23 @@ $(function() {
         }
     });
 
-    $('#instagram').mask('httpS://instagram.com/99999000000000000000000000000000', {
-        clearIfNotMatch: true,
-        translation: {
-            '0': { pattern: /[A-Za-z0-9_]/, optional: true },
-            '9': { pattern: /[A-Za-z0-9_]/ },
-            S: { pattern: /[s]/, optional: true }
+    $('#instagram').mask(
+        'httpS://instagram.com/99999000000000000000000000000000',
+        {
+            clearIfNotMatch: true,
+            translation: {
+                '0': { pattern: /[A-Za-z0-9_]/, optional: true },
+                '9': { pattern: /[A-Za-z0-9_]/ },
+                S: { pattern: /[s]/, optional: true }
+            }
         }
-    });
+    );
 
     $('#params').mask('990/990/990', {
         clearIfNotMatch: true,
         translation: {
             '0': { pattern: /[0-9]/, optional: true },
-            '9': { pattern: /[0-9]/ },
+            '9': { pattern: /[0-9]/ }
         }
     });
 
@@ -93,9 +96,26 @@ $(function() {
             },
             kurs: 'selectNotDefault',
             fakultet: 'selectNotDefault',
+            email: {
+                required: true,
+                maxlength: 256
+            },
+            phone: {
+                required: true,
+                maxlength: 256
+            },
             vklink: {
                 required: true,
                 maxlength: 256
+            },
+            instagram: {
+                required: true,
+                maxlength: 256
+            },
+            height: {
+                required: true,
+                number: true,
+                range: [140, 230]
             },
             hobbies: {
                 required: true,
@@ -104,15 +124,6 @@ $(function() {
             mr_reu_2018: {
                 required: true,
                 maxlength: 1024
-            },
-            phone: {
-                required: true,
-                maxlength: 1024
-            },
-            height: {
-                required: true,
-                number: true,
-                range: [140, 230]
             }
         },
         submitHandler: function(form) {
@@ -120,7 +131,7 @@ $(function() {
             writeFormToLocalStorage(serialized);
 
             var photosCount = $('#photos')[0].files.length;
-            console.log(photosCount)
+            console.log(photosCount);
             if (photosCount != 2) {
                 alert('Прикрепи 2 фотографии');
             } else {
@@ -133,7 +144,10 @@ $(function() {
     });
 
     var formData = readFormFromLocalStorage();
-    if (formData && confirm('Ты уже заполняла эту форму. Восстановить введённые значения?')) {
+    if (
+        formData &&
+        confirm('Ты уже заполняла эту форму. Восстановить введённые значения?')
+    ) {
         applyFormData(formData);
     } else {
         eraseFormFromLocalStorage();
@@ -153,5 +167,6 @@ $.extend($.validator.messages, {
     maxlength: 'В это поле нельзя ввести больше {0} символов',
     number: $.validator.format('Введи корректное число'),
     range: $.validator.format('Введи значение между {0} и {1}'),
-    selectNotDefault: 'Выбери значение'
+    selectNotDefault: 'Выбери значение',
+    email: 'Введи корректный email-адрес'
 });

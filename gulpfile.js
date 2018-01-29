@@ -6,18 +6,19 @@ var uglifyjs = require('gulp-uglify');
 var autoprefixer = require('autoprefixer');
 var cssnano = require('cssnano');
 var concat = require('gulp-concat');
+var webserver = require('gulp-webserver');
 
 var htmlPath = './src/*.html';
-var cssPath = './src/*.css';
+var cssPath = './src/ui/miss/*.css';
 var jsPath = [
-    './src/jquery-3.2.1.min.js',
-    './src/jquery.jscrollpane.min.js',
-    './src/jquery.mask.min.js',
-    './src/jquery.validate.min.js',
-    './src/index.js'
+    './src/ui/miss/jquery-3.2.1.min.js',
+    './src/ui/miss/jquery.jscrollpane.min.js',
+    './src/ui/miss/jquery.mask.min.js',
+    './src/ui/miss/jquery.validate.min.js',
+    './src/ui/miss/index.js'
 ];
-var staticPath = './src/static/*';
-var outputPath = './build/ui/';
+var staticPath = './src/ui/miss/static/*';
+var outputPath = './build/ui/miss/';
 var htmlOutputPath = './build/';
 
 gulp.task('default', ['html', 'js', 'css', 'static']);
@@ -64,9 +65,12 @@ gulp.task('static', function() {
     return gulp.src(staticPath).pipe(gulp.dest(outputPath + 'static'));
 });
 
-gulp.task('watch', ['html', 'js', 'css', 'static'], function() {
-    gulp.watch(htmlPath, ['html']);
-    gulp.watch(cssPath, ['css']);
-    gulp.watch(jsPath, ['js']);
-    gulp.watch(staticPath, ['static']);
+gulp.task('watch', function() {
+    gulp.src('src').pipe(
+        webserver({
+            livereload: true,
+            directoryListing: false,
+            open: true
+        })
+    );
 });

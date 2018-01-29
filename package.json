@@ -3,6 +3,7 @@
   "author": "leralins, mlshv",
   "license": "MIT",
   "scripts": {
+    "start": "gulp watch",
     "watch": "gulp watch",
     "build": "gulp",
     "clean": "rm -rf build"
@@ -15,6 +16,7 @@
     "gulp-htmlmin": "^4.0.0",
     "gulp-postcss": "^7.0.1",
     "gulp-uglify": "^3.0.0",
-    "gulp-uglifycss": "^1.0.9"
+    "gulp-uglifycss": "^1.0.9",
+    "gulp-webserver": "^0.9.1"
   }
 }
