@@ -60,7 +60,31 @@ $(function() {
         }
     );
 
-    $('#params').mask('990/990/990', {
+    $('#height').mask('990', {
+        clearIfNotMatch: true,
+        translation: {
+            '0': { pattern: /[0-9]/, optional: true },
+            '9': { pattern: /[0-9]/ }
+        }
+    });
+
+    $('#param1').mask('990', {
+        clearIfNotMatch: true,
+        translation: {
+            '0': { pattern: /[0-9]/, optional: true },
+            '9': { pattern: /[0-9]/ }
+        }
+    });
+
+    $('#param2').mask('990', {
+        clearIfNotMatch: true,
+        translation: {
+            '0': { pattern: /[0-9]/, optional: true },
+            '9': { pattern: /[0-9]/ }
+        }
+    });
+
+    $('#param3').mask('990', {
         clearIfNotMatch: true,
         translation: {
             '0': { pattern: /[0-9]/, optional: true },
@@ -148,7 +172,7 @@ $(function() {
 
             var photosCount = $('#photos')[0].files.length;
             if (photosCount != 2) {
-                alert('Прикрепи 2 фотографии');
+                alert('Прикрепи 2 фотографии, зажав клавишу Ctrl');
             } else {
                 var params =
                     $('#param1')[0].value +
