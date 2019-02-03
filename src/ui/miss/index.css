@@ -7,8 +7,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Open Sans', sans-serif;
-    background: #dcd5d5;
+    font-family: 'Roboto', sans-serif;
+    background: #121212;
     overflow-x: hidden;
 }
 @media (max-width: 1140px) {
@@ -19,54 +19,55 @@ body {
 input,
 select,
 textarea {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     width: 100%;
     padding-bottom: 5px;
     box-sizing: border-box;
     border: 0;
     outline: 0;
     background: transparent;
-    border-bottom: 2px solid #d6c1c1;
+    border-bottom: 2px solid #39393C;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: #201010;
+    color: #fff;
     resize: none;
     overflow: hidden;
     font-size: 17.5px;
+    font-weight: 300;
 }
 input:focus,
 textarea:focus {
-    border-bottom: 2px solid #8b9bbe;
-    color: #201010;
+    border-bottom: 2px solid #39393C;
+    color: #fff;
 }
 select {
-    color: #201010;
+    color: #fff;
 }
 
 input::-webkit-input-placeholder {
     opacity: 1;
-    color: #dcd5d5;
+    color: #39393C;
 }
 input::-ms-input-placeholder {
     opacity: 1;
-    color: #dcd5d5;
+    color: #39393C;
 }
 input:-ms-input-placeholder {
     opacity: 1;
-    color: #dcd5d5;
+    color: #39393C;
 }
 input::-moz-placeholder {
     opacity: 1;
-    color: #dcd5d5;
+    color: #39393C;
 }
 input:-moz-placeholder {
     opacity: 1;
-    color: #dcd5d5;
+    color: #39393C;
 }
 input::placeholder {
     opacity: 1;
-    color: #dcd5d5;
+    color: #39393C;
 }
 label select,
 textarea,
@@ -110,7 +111,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     width: 1140px;
     height: 667px;
-    box-shadow: 0px 6px 45px 0px rgba(0, 0, 0, 0.35);
+    box-shadow: 0px 0px 30px rgba(179, 130, 59, 0.2);
 }
 @media (max-width: 1140px) {
     .form-card {
@@ -173,7 +174,7 @@ input::-webkit-inner-spin-button {
     flex-wrap: wrap;
     flex: 1;
     padding: 45px 50px 50px 50px;
-    background: #fffdfd;
+    background: #111112;
 }
 @media (max-width: 1140px) {
     .form-card-content {
@@ -190,7 +191,6 @@ input::-webkit-inner-spin-button {
     padding-right: 15px;
     font-weight: 600;
     font-size: 35px;
-    color: #201010;
 }
 @media (max-width: 1140px) {
     .form-card-title {
@@ -198,10 +198,17 @@ input::-webkit-inner-spin-button {
     }
 }
 
+.form-card-title-span {
+    color: transparent;
+    background: linear-gradient(158.83deg, #E5D68E 0.84%, #A9702A 116.38%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
 .itc-link {
     font-weight: bold;
     font-size: 15px;
-    color: #dcd5d5;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -247,7 +254,8 @@ input::-webkit-inner-spin-button {
 .field-label {
     display: block;
     font-size: 17.5px;
-    color: #201010;
+    font-weight: 300;
+    color: #fff;
 }
 @media (max-width: 1140px) {
     .field-label {
@@ -264,8 +272,9 @@ input::-webkit-inner-spin-button {
 
 label.error {
     margin-top: 5px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17.5px;
+    font-weight: 300;
     color: #ff7b7b;
 }
 
@@ -281,11 +290,11 @@ label.error {
     flex-basis: 31%;
     padding-left: 20px;
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 300;
     line-height: normal;
-    color: #201010;
+    color: #fff;
 }
 @media (max-width: 1140px) {
     .form-card-side_content {
@@ -316,9 +325,9 @@ label.error {
 
 #photos-count {
     font-size: 150px;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 0.7;
-    color: #dcd5d5;
+    color: #39393C;
 }
 
 .form-card-register_wrapper {
@@ -350,23 +359,22 @@ label.error {
     height: 56px;
     margin-right: 7px;
     text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
     font-weight: normal;
     line-height: 36px;
     border-radius: 50%;
-    background: #986868;
+    background: linear-gradient(161.94deg, #E8DB91 12.3%, #B3823B 103.67%);
     cursor: pointer;
-    color: #201010;
+    color: #fff;
     transition: all 100ms ease-in-out;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .attachment-button:hover {
     transform: scale(1.02);
-    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 13px 0 rgba(255, 255, 255, 0.5);
 }
 .attachment-button:active {
-    background: #795252;
+    background: linear-gradient(-18.06deg, #E8DB91 12.3%, #B3823B 103.67%);
 }
 @media (max-width: 1140px) {
     .attachment-button {
@@ -388,23 +396,22 @@ label.error {
     box-sizing: border-box;
     text-transform: uppercase;
     border-radius: 3px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 17.5px;
-    font-weight: 600;
-    background: #986868;
+    font-weight: 400;
+    background: linear-gradient(161.94deg, #E8DB91 12.3%, #B3823B 103.67%);
     border: none;
     cursor: pointer;
     color: #fff;
     outline: none;
     transition: all 100ms ease-in-out;
-    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .submit:hover {
     transform: scale(1.02);
-    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 3px 13px 0 rgba(255, 255, 255, 0.5);
 }
 .submit:active {
-    background: #795252;
+    background: linear-gradient(-18.06deg, #E8DB91 12.3%, #B3823B 103.67%);
 }
 
 .secondary-body {
