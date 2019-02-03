@@ -416,13 +416,14 @@ label.error {
 
 .secondary-body {
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
     padding: 20px;
     box-sizing: border-box;
     background: url('static/blured_cover.jpg');
     background-position: center;
     background-size: cover;
     text-align: center;
-    color: #201010;
+    color: #fff;
 }
 @media (max-width: 1140px) {
     .secondary-body {
@@ -431,20 +432,27 @@ label.error {
 }
 
 .secondary-title {
+    font-weight: 300;
+    text-transform: uppercase;
     margin: 10px;
 }
 
 .secondary-title-large {
-    font-size: 60px;
+    font-size: 6rem;
+}
+
+.secondary-text {
+    font-weight: 300;
+    font-size: 2rem;
 }
 
 .secondary-button {
     padding: 10px 20px;
-    font-size: 16px;
+    font-size: 1.2rem;
     text-transform: uppercase;
     text-decoration: none;
-    border: 1px solid #201010;
-    color: #201010;
+    background: linear-gradient(161.94deg, #E8DB91 12.3%, #B3823B 103.67%);
+    color: #fff;
     border-radius: 30px;
     transition: transform 100ms ease-in-out;
 }

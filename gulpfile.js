@@ -9,16 +9,16 @@ var concat = require('gulp-concat');
 var webserver = require('gulp-webserver');
 
 var htmlPath = './src/*.html';
-var cssPath = './src/ui/miss/*.css';
+var cssPath = './src/ui/mister/*.css';
 var jsPath = [
-    './src/ui/miss/jquery-3.2.1.min.js',
-    './src/ui/miss/jquery.jscrollpane.min.js',
-    './src/ui/miss/jquery.mask.min.js',
-    './src/ui/miss/jquery.validate.min.js',
-    './src/ui/miss/index.js'
+    './src/ui/mister/jquery-3.2.1.min.js',
+    './src/ui/mister/jquery.jscrollpane.min.js',
+    './src/ui/mister/jquery.mask.min.js',
+    './src/ui/mister/jquery.validate.min.js',
+    './src/ui/mister/index.js'
 ];
-var staticPath = './src/ui/miss/static/*';
-var outputPath = './build/ui/miss/';
+var staticPath = './src/ui/mister/static/*';
+var outputPath = './build/ui/mister/';
 var htmlOutputPath = './build/';
 
 gulp.task('default', ['html', 'js', 'css', 'static']);

@@ -60,14 +60,6 @@ $(function() {
         }
     );
 
-    $('#params').mask('990/990/990', {
-        clearIfNotMatch: true,
-        translation: {
-            '0': { pattern: /[0-9]/, optional: true },
-            '9': { pattern: /[0-9]/ }
-        }
-    });
-
     $('#photos').change(function(event) {
         var photosCount = $('#photos')[0].files.length;
         if (photosCount > 9) {
@@ -117,27 +109,11 @@ $(function() {
                 number: true,
                 range: [140, 230]
             },
-            param1: {
-                required: true,
-                number: true
-            },
-            param2: {
-                required: true,
-                number: true
-            },
-            param3: {
-                required: true,
-                number: true
-            },
             talent: {
                 required: true,
                 maxlength: 1024
             },
-            hobbies: {
-                required: true,
-                maxlength: 1024
-            },
-            mr_reu_2018: {
+            essay: {
                 required: true,
                 maxlength: 1024
             }
@@ -150,13 +126,6 @@ $(function() {
             if (photosCount != 2) {
                 alert('Прикрепи 2 фотографии');
             } else {
-                var params =
-                    $('#param1')[0].value +
-                    '/' +
-                    $('#param2')[0].value +
-                    '/' +
-                    $('#param3')[0].value;
-                $('#param').val(params);
                 form.submit();
             }
         },
@@ -168,7 +137,7 @@ $(function() {
     var formData = readFormFromLocalStorage();
     if (
         formData &&
-        confirm('Ты уже заполняла эту форму. Восстановить введённые значения?')
+        confirm('Ты уже заполнял эту форму. Восстановить введённые значения?')
     ) {
         applyFormData(formData);
     } else {
